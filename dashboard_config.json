@@ -40,7 +40,14 @@
 
         {
           "id": "objective",
-          "title": "Domaines d'intervention clés de l'évaluation",
+          "title": "Objectifs",
+          "content": "Les objectifs spécifiques sont :<br><br>• <strong>Stratégies de prévention :</strong> Évaluer l'évolution temporelle des campagnes de distribution de masse de moustiquaires imprégnées d'insecticide longue durée (MILD), la distribution de routine par les cliniques prénatales (CPN) et les plateformes de vaccination (PEV), ainsi que la Distribution en Milieu Scolaire (DMS). Analyser la couverture et l'impact de la Pulvérisation Intradomiciliaire d'Insecticide (PID) là où elle est mise en œuvre ;<br><br>• <strong>Prise en charge des cas et diagnostic :</strong> Comparer les tendances de disponibilité et d'utilisation des tests de diagnostic rapide (TDR) et de la microscopie dans les formations sanitaires, l'accès en temps opportun aux médicaments antipaludiques de qualité assurée, et la formation/supervision des agents de santé sur les directives de traitement ;<br><br>• <strong>Surveillance, suivi et évaluation :</strong> Comparer les tendances des différents systèmes de collecte de données, de rapportage et d'utilisation du DHIS2 ; analyser l'évolution des taux de positivité des tests, de l'incidence et des tendances de mortalité ; évaluer la surveillance communautaire ;<br><br>• <strong>Engagement communautaire et changement social de comportement :</strong> Identifier les indicateurs d'efficacité des stratégies CSCC qui présentent des tendances similaires à celles des indicateurs de couverture, et ceux qui diffèrent, afin de mieux comprendre l'appropriation communautaire et le rôle de la DMS dans l'autonomisation des enfants scolarisés comme champions de la prévention du paludisme ;<br><br>• <strong>Gouvernance du programme et coordination :</strong> Analyser l'évolution des capacités institutionnelles, des partenariats entre le MdS et le MBSSE, et des mécanismes de financement des interventions antipaludiques dans les différentes régions.",
+          "enabled": true
+        },
+
+        {
+          "id": "indicators",
+          "title": "Liste des indicateurs",
           "content": "Les objectifs spécifiques sont :<br><br>• <strong>Stratégies de prévention :</strong> Évaluer l'évolution temporelle des campagnes de distribution de masse de moustiquaires imprégnées d'insecticide longue durée (MILD), la distribution de routine par les cliniques prénatales (CPN) et les plateformes de vaccination (PEV), ainsi que la Distribution en Milieu Scolaire (DMS). Analyser la couverture et l'impact de la Pulvérisation Intradomiciliaire d'Insecticide (PID) là où elle est mise en œuvre ;<br><br>• <strong>Prise en charge des cas et diagnostic :</strong> Comparer les tendances de disponibilité et d'utilisation des tests de diagnostic rapide (TDR) et de la microscopie dans les formations sanitaires, l'accès en temps opportun aux médicaments antipaludiques de qualité assurée, et la formation/supervision des agents de santé sur les directives de traitement ;<br><br>• <strong>Surveillance, suivi et évaluation :</strong> Comparer les tendances des différents systèmes de collecte de données, de rapportage et d'utilisation du DHIS2 ; analyser l'évolution des taux de positivité des tests, de l'incidence et des tendances de mortalité ; évaluer la surveillance communautaire ;<br><br>• <strong>Engagement communautaire et changement social de comportement :</strong> Identifier les indicateurs d'efficacité des stratégies CSCC qui présentent des tendances similaires à celles des indicateurs de couverture, et ceux qui diffèrent, afin de mieux comprendre l'appropriation communautaire et le rôle de la DMS dans l'autonomisation des enfants scolarisés comme champions de la prévention du paludisme ;<br><br>• <strong>Gouvernance du programme et coordination :</strong> Analyser l'évolution des capacités institutionnelles, des partenariats entre le MdS et le MBSSE, et des mécanismes de financement des interventions antipaludiques dans les différentes régions.",
           "enabled": true
         }
@@ -49,7 +56,7 @@
     },
     {
       "id": "impact_indicators",
-      "name": "Impact Indicators",
+      "name": "Liste des indicateurs",
       "enabled": true,
       "sections": [
         {
