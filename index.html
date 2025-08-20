@@ -234,6 +234,72 @@
             padding: 20px;
         }
 
+        /* Subsection Styles */
+        .collapsible-subsection {
+            margin: 15px 0;
+            margin-left: 20px; /* Indent subsections */
+            border: 1px solid rgba(0, 102, 204, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.08);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .subsection-toggle {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.8), rgba(0, 68, 153, 0.8));
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #0066cc;
+        }
+
+        .subsection-toggle:hover {
+            background: linear-gradient(135deg, rgba(0, 68, 153, 0.9), rgba(0, 102, 204, 0.9));
+            border-left: 4px solid #004499;
+        }
+
+        .subsection-toggle::after {
+            content: '▶';
+            font-size: 1em;
+            transition: transform 0.3s ease;
+        }
+
+        .subsection-toggle.collapsed::after {
+            transform: rotate(90deg);
+        }
+
+        .subsection-content {
+            background: rgba(255, 255, 255, 0.9);
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            padding: 0;
+            border-left: 3px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .subsection-content.expanded {
+            max-height: none;
+            padding: 15px;
+        }
+
+        /* Adjust content text within subsections */
+        .subsection-content .content-text {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-left: 3px solid rgba(0, 102, 204, 0.5);
+            font-size: 1em;
+        }
+
         .content-text {
             font-size: 1.1em;
             line-height: 1.6;
@@ -399,6 +465,19 @@
                 position: relative;
                 margin-bottom: 20px;
             }
+
+            .collapsible-subsection {
+                margin-left: 10px;
+            }
+            
+            .subsection-toggle {
+                padding: 12px 15px;
+                font-size: 1em;
+            }
+            
+            .subsection-content.expanded {
+                padding: 10px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -435,21 +514,20 @@
 </head>
 <body>
 
-
     <div class="header">
         <div class="header-content">
-            <!-- Logo Section for 2 logos -->
+            <!-- Logo Section for 3 logos -->
             <div class="logo-section">
                 <div class="logo-container">
-                    <img src="MOH.png" alt="CHAI Logo" class="logo-image">
+                    <img src="MOH.png" alt="MOH Logo" class="logo-image">
                 </div>
 
                 <div class="logo-container">
-                    <img src="NU.png" alt="ICF-SL Logo" class="logo-image">
+                    <img src="NU.png" alt="NU Logo" class="logo-image">
                 </div>
 
                 <div class="logo-container">
-                    <img src="IRSS.png" alt="ICF-SL Logo" class="logo-image">
+                    <img src="IRSS.png" alt="IRSS Logo" class="logo-image">
                 </div>
             </div>
             
@@ -457,7 +535,6 @@
             <div class="title-section">
                 <h1 class="main-title">Renforcer les preuves de la performance des systèmes de santé au Burkina Faso</h1>
                 <h2 class="subtitle">Analyse de tendance de la mortalite et morbidite</h2>
-               
             </div>
         </div>
     </div>
@@ -579,6 +656,14 @@
                 contentDiv.appendChild(textDiv);
             }
             
+            // Add subsections if they exist
+            if (section.subsections && section.subsections.length > 0) {
+                section.subsections.forEach(subsection => {
+                    const subsectionDiv = renderSubsection(subsection);
+                    contentDiv.appendChild(subsectionDiv);
+                });
+            }
+            
             // Add images if they exist
             if (section.images && section.images.length > 0) {
                 const gridDiv = document.createElement('div');
@@ -613,6 +698,65 @@
             
             sectionDiv.appendChild(contentDiv);
             return sectionDiv;
+        }
+
+        // New function to render subsections
+        function renderSubsection(subsection) {
+            const subsectionDiv = document.createElement('div');
+            subsectionDiv.className = 'collapsible-subsection';
+            
+            // Subsection toggle button
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'subsection-toggle collapsed';
+            toggleButton.textContent = subsection.title;
+            toggleButton.onclick = function() { toggleSubsection(this); };
+            subsectionDiv.appendChild(toggleButton);
+            
+            // Subsection content
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'subsection-content';
+            
+            // Add text content
+            if (subsection.content) {
+                const textDiv = document.createElement('div');
+                textDiv.className = 'content-text';
+                textDiv.innerHTML = subsection.content.replace(/\n/g, '<br>');
+                contentDiv.appendChild(textDiv);
+            }
+            
+            // Add images for subsection
+            if (subsection.images && subsection.images.length > 0) {
+                const gridDiv = document.createElement('div');
+                gridDiv.className = 'content-grid';
+                
+                subsection.images.forEach(imageSrc => {
+                    const rowDiv = document.createElement('div');
+                    rowDiv.className = 'content-row';
+                    
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container';
+                    
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.alt = imageSrc;
+                    img.className = 'dashboard-image';
+                    img.onerror = function() {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'image-placeholder';
+                        placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
+                        this.parentNode.replaceChild(placeholder, this);
+                    };
+                    
+                    imageContainer.appendChild(img);
+                    rowDiv.appendChild(imageContainer);
+                    gridDiv.appendChild(rowDiv);
+                });
+                
+                contentDiv.appendChild(gridDiv);
+            }
+            
+            subsectionDiv.appendChild(contentDiv);
+            return subsectionDiv;
         }
 
         // Tab and section control functions
@@ -656,6 +800,20 @@
         }
 
         function toggleSection(button) {
+            const content = button.nextElementSibling;
+            const isCollapsed = content.classList.contains("expanded");
+            
+            if (isCollapsed) {
+                content.classList.remove("expanded");
+                button.classList.add("collapsed");
+            } else {
+                content.classList.add("expanded");
+                button.classList.remove("collapsed");
+            }
+        }
+
+        // New function to toggle subsections
+        function toggleSubsection(button) {
             const content = button.nextElementSibling;
             const isCollapsed = content.classList.contains("expanded");
             
