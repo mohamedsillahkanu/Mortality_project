@@ -15,13 +15,13 @@
     {
       "id": "northwestern",
       "src": "NU.png",
-      "alt": "",
+      "alt": "Northwestern University Logo",
       "enabled": true
     },
     {
       "id": "irss",
       "src": "IRSS.png",
-      "alt": "",
+      "alt": "IRSS Logo",
       "enabled": true
     }
   ],
@@ -37,179 +37,234 @@
           "content": " ",
           "enabled": true
         },
-
         {
           "id": "objectives",
           "title": "Objectifs",
           "content": "<h3 style='color: #2c5282; margin-bottom: 15px;'>1.1 Objectif général</h3><p style='margin-bottom: 20px; font-size: 16px; line-height: 1.6;'>Analyser les tendances de la mortalité et de la morbidité au Burkina Faso.</p><h3 style='color: #2c5282; margin-bottom: 15px;'>1.2. Objectifs spécifiques</h3><p style='margin-bottom: 15px; font-style: italic;'>Les objectifs spécifiques sont :</p><br>• <strong>Évolution temporelle des indicateurs de mortalité :</strong> Évaluer l'évolution temporelle des indicateurs de mortalité au niveau national, régional et des districts, en analysant les tendances sur plusieurs années pour identifier les patterns de changement et les variations géographiques significatives ;<br><br>• <strong>Analyse comparative des tendances régionales :</strong> Comparer les tendances dans les régions/districts aux tendances nationales selon les différentes sources de données, afin d'identifier les disparités territoriales et les facteurs explicatifs des variations observées ;<br><br>• <strong>Analyse différentielle de la mortalité :</strong> Comparer les tendances des différents indicateurs de mortalité (mortalité néonatale, infantile, maternelle, des enfants de moins de 5 ans et toutes causes confondues), en examinant les corrélations et les divergences entre ces indicateurs pour une compréhension globale de la santé publique ;<br><br>• <strong>Évolution de la morbidité par contexte épidémiologique :</strong> Analyser l'évolution des indicateurs de morbidité au niveau national, régional et des districts en se concentrant sur les maladies les plus pertinentes dans le contexte Burkinabè (paludisme, infections respiratoires, maladies diarrhéiques, malnutrition), avec une attention particulière aux variations saisonnières et géographiques ;<br><br>• <strong>Analyse de corrélation mortalité-morbidité :</strong> Identifier les indicateurs de morbidité qui présentent des tendances similaires à celles des indicateurs de mortalité, et ceux qui diffèrent, afin de mieux comprendre la relation entre mortalité et morbidité dans les différentes régions et d'orienter les interventions de santé publique de manière plus ciblée.",
           "enabled": true
         },
-
         {
           "id": "indicators_tab",
           "title": "Indicateurs",
           "subtitle": "",
-          "content": "<h3>Tableau 1 : Liste des indicateurs de mortalité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité infanto-juvénile</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total d'enfants de moins de 5 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité infantile</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès des enfants de 0 à 11 mois</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes de la période</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité néonatale</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de 0 à 28 jours</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes de la période</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de décès maternel</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès maternels</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de parturientes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité chez les 5-14 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de 5-14 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des 5-14 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité chez les adultes</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'adultes</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des adultes</td></tr></tbody></table><h3>Tableau 2 : Liste des indicateurs de mortalité spécifique</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique du paludisme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus au paludisme grave</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des maladies respiratoires (Pneumonie)</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies respiratoires</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique de la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique de l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des femmes enceintes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes</td></tr></tbody></table><h3>Tableau 3 : Liste des indicateurs de létalité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité du paludisme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus au paludisme grave</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de paludisme</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des maladies respiratoires (Pneumonie)</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies respiratoires</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de maladies respiratoires</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de maladies diarrhéiques</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité de la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de malnutrition aiguë sévère</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité de l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'anémie</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'hémorragies chez la femme</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'infections néonatales</td></tr></tbody></table><h3>Tableau 4 : Liste des indicateurs de morbidité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de fièvre au cours des deux dernières semaines chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de fièvre au cours des deux dernières semaines chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale enfants de 0-59 mois</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de fièvre au cours des trente derniers jours par tranche d'âge de la population, région, sexe et milieu de résidence</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de fièvre au cours des trente derniers jours par tranche d'âge de la population</td><td style='border: 1px solid #000; padding: 8px;'>Population totale spécifique (par tranche d'âge, par région et par sexe)</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de paludisme confirmé chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas confirmés de paludisme (simple et grave) adultes, femmes enceintes)</td><td style='border: 1px solid #000; padding: 8px;'>Population totale enfants de 0-59 mois</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Prévalence de l'anémie chez les enfants de 6-59 mois</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'anémie chez les enfants de 6-59 mois</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des enfants de 6-59 mois</td></tr></tbody></table><h3>Tableau 5 : Indicateurs de malnutrition</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Degré de sévérité</strong></th><th colspan='3' style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Malnutrition (Référence de croissance internationale OMS 2006)</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Insuffisance Pondérale</strong></th></tr><tr style='background-color: #f9f9f9;'><th style='border: 1px solid #000; padding: 8px;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Aiguë</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Chronique</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'></th></tr><tr style='background-color: #f9f9f9;'><th style='border: 1px solid #000; padding: 8px;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Poids/Taille (P/T)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Périmètre brachial (PB)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Taille Age (T/A)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Poids Age (P/A)</th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Globale</strong></td><td style='border: 1px solid #000; padding: 8px;'>P/T < -2 Zsc et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>PB < 125 mm et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>T/A < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>P/A < -2 Zsc</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Modérée</strong></td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ P/T < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>115mm≤PB<125mm</td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ T/A < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ P/A < -2 Zsc</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Sévère</strong></td><td style='border: 1px solid #000; padding: 8px;'>P/T < -3 Zsc et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>PB < 115 mm et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>T/A < -3 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>P/A < -3 Zsc</td></tr></tbody></table><h3>Tableau 6 : Liste des indicateurs d'utilisation et de couverture des services de santé</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de femmes vues en consultation prénatale au premier trimestre</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de CPN1 au premier trimestre</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de grossesses attendues</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de couverture en CPN4</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en CPN4</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en CPN1</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion d'accouchements</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements attendus</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des femmes vues en consultation post-natale à la sixième semaine</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en consultation post-natale à la sixième semaine</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de nouvelles consultations chez les moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de consultants des moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des moins de 5 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de nouvelles consultations chez les adultes</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de consultants des adultes</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des adultes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Rayon moyen d'action théorique</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Nombre de CSPS</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Ratio habitants/CSPS</td><td style='border: 1px solid #000; padding: 8px;'>Nombre d'habitants</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de CSPS</td></tr></tbody></table>",
-          "enabled": true
-        }
-           
-      ]
-    },
-    {
-      "id": "impact_indicators",
-      "name": "Indicateurs de mortalite`",
-      "enabled": true,
-      "sections": [
-        {
-          "id": "impact_overview",
-          "title": "Impact Indicators Overview",
-          "content": "Analysis of key malaria impact indicators including case incidence, test positivity rates, mortality rates, and hospital admissions across Sierra Leone.",
-          "images": [
-            "indicator_01_Malaria_case_incidence_per_1000_people_per_year.png",
-            "malaria admission.png"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "mortality_analysis",
-          "title": "Mortality and Test Positivity Analysis", 
-          "content": "Comprehensive review of malaria mortality patterns and diagnostic testing outcomes.",
-          "images": [
-            "indicator_03_Malaria_test_positivity_rate_pct.png",
-            "indicator_07_Malaria_mortality_rate_per_100,000_persons_per_yea.png"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "case_reports",
-          "title": "Case Reporting Analysis",
-          "content": "Analysis of inpatient deaths and reported malaria cases (both presumed and confirmed) trends.",
-          "images": [
-            "Inpatient malaria deaths.png",
-            "Reported malaria cases (presumed and confirmed).png"
-          ],
+          "content": "<h3>Tableau 1 : Liste des indicateurs de mortalite</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité infanto-juvénile</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total d'enfants de moins de 5 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité infantile</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès des enfants de 0 à 11 mois</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes de la période</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité néonatale</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de 0 à 28 jours</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes de la période</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de décès maternel</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès maternels</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de parturientes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité chez les 5-14 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de 5-14 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des 5-14 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité chez les adultes</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'adultes</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des adultes</td></tr></tbody></table><h3>Tableau 2 : Liste des indicateurs de mortalité spécifique</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique du paludisme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus au paludisme grave</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des maladies respiratoires (Pneumonie)</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies respiratoires</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique de la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique de l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des femmes enceintes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes</td></tr></tbody></table><h3>Tableau 3 : Liste des indicateurs de létalité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité du paludisme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus au paludisme grave</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de paludisme</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des maladies respiratoires (Pneumonie)</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies respiratoires</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de maladies respiratoires</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de maladies diarrhéiques</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité de la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de malnutrition aiguë sévère</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité de l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'anémie</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'hémorragies chez la femme</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'infections néonatales</td></tr></tbody></table><h3>Tableau 4 : Liste des indicateurs de morbidité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de fièvre au cours des deux dernières semaines chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de fièvre au cours des deux dernières semaines chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale enfants de 0-59 mois</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de fièvre au cours des trente derniers jours par tranche d'âge de la population, région, sexe et milieu de résidence</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de fièvre au cours des trente derniers jours par tranche d'âge de la population</td><td style='border: 1px solid #000; padding: 8px;'>Population totale spécifique (par tranche d'âge, par région et par sexe)</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de paludisme confirmé chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas confirmés de paludisme (simple et grave) adultes, femmes enceintes)</td><td style='border: 1px solid #000; padding: 8px;'>Population totale enfants de 0-59 mois</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Prévalence de l'anémie chez les enfants de 6-59 mois</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'anémie chez les enfants de 6-59 mois</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des enfants de 6-59 mois</td></tr></tbody></table><h3>Tableau 5 : Indicateurs de malnutrition</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Degré de sévérité</strong></th><th colspan='3' style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Malnutrition (Référence de croissance internationale OMS 2006)</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Insuffisance Pondérale</strong></th></tr><tr style='background-color: #f9f9f9;'><th style='border: 1px solid #000; padding: 8px;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Aiguë</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Chronique</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'></th></tr><tr style='background-color: #f9f9f9;'><th style='border: 1px solid #000; padding: 8px;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Poids/Taille (P/T)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Périmètre brachial (PB)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Taille Age (T/A)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Poids Age (P/A)</th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Globale</strong></td><td style='border: 1px solid #000; padding: 8px;'>P/T < -2 Zsc et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>PB < 125 mm et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>T/A < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>P/A < -2 Zsc</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Modérée</strong></td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ P/T < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>115mm≤PB<125mm</td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ T/A < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ P/A < -2 Zsc</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Sévère</strong></td><td style='border: 1px solid #000; padding: 8px;'>P/T < -3 Zsc et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>PB < 115 mm et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>T/A < -3 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>P/A < -3 Zsc</td></tr></tbody></table><h3>Tableau 6 : Liste des indicateurs d'utilisation et de couverture des services de santé</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de femmes vues en consultation prénatale au premier trimestre</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de CPN1 au premier trimestre</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de grossesses attendues</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de couverture en CPN4</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en CPN4</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en CPN1</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion d'accouchements</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements attendus</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des femmes vues en consultation post-natale à la sixième semaine</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en consultation post-natale à la sixième semaine</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de nouvelles consultations chez les moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de consultants des moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des moins de 5 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de nouvelles consultations chez les adultes</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de consultants des adultes</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des adultes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Rayon moyen d'action théorique</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Nombre de CSPS</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Ratio habitants/CSPS</td><td style='border: 1px solid #000; padding: 8px;'>Nombre d'habitants</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de CSPS</td></tr></tbody></table>",
           "enabled": true
         }
       ]
     },
     {
-      "id": "crude_incidence",
-      "name": "Crude Incidence",
+      "id": "global_mortality_indicators",
+      "name": "Indicateurs de Mortalité Globale et Paludisme",
+      "description": "Indicateurs complets de mortalité incluant les taux de mortalité globale et les indicateurs spécifiques au paludisme pour le Burkina Faso",
       "enabled": true,
-      "sections": [
+      "categories": [
         {
-          "id": "national_trends",
-          "title": "📊 National Crude Incidence Trends",
-          "content": "National overview of malaria crude incidence trends and district-level subplot analysis.",
-          "images": [
-            "national_crude_incidence_trend (3).png",
-            "crude_incidence_trend_subplots_4x4.png"
-          ],
-          "enabled": true
+          "id": "infant_juvenile_mortality",
+          "name": "Taux de Mortalité Infanto-Juvénile",
+          "description": "Taux de mortalité pour les enfants et juvéniles",
+          "age_group": "0-18 ans",
+          "unit": "pour 1 000 naissances vivantes",
+          "enabled": true,
+          "levels": [
+            {
+              "id": "infant_juvenile_national",
+              "name": "National",
+              "images": [
+                "infant_juvenile_mortality_national_trend_1.png",
+                "infant_juvenile_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "infant_juvenile_regional",
+              "name": "Régional",
+              "images": [
+                "infant_juvenile_mortality_regional_trend_1.png",
+                "infant_juvenile_mortality_regional_trend_2.png"
+              ]
+            },
+            {
+              "id": "infant_juvenile_district",
+              "name": "District",
+              "images": [
+                "infant_juvenile_mortality_district_trend_1.png",
+                "infant_juvenile_mortality_district_trend_2.png"
+              ]
+            }
+          ]
         },
         {
-          "id": "geographic_analysis",
-          "title": "🗺️ Geographic Distribution Analysis",
-          "content": "Spatial analysis of crude incidence changes across districts and chiefdoms.",
-          "images": [
-            "district_change_overview_map.png",
-            "national_crude_incidence_change_map.png"
-          ],
-          "enabled": true
+          "id": "infant_mortality",
+          "name": "Taux de Mortalité Infantile",
+          "description": "Taux de mortalité pour les nourrissons",
+          "age_group": "0-1 an",
+          "unit": "pour 1 000 naissances vivantes",
+          "enabled": true,
+          "levels": [
+            {
+              "id": "infant_national",
+              "name": "National",
+              "images": [
+                "infant_mortality_national_trend_1.png",
+                "infant_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "infant_regional",
+              "name": "Régional",
+              "images": [
+                "infant_mortality_regional_trend_1.png",
+                "infant_mortality_regional_trend_2.png"
+              ]
+            },
+            {
+              "id": "infant_district",
+              "name": "District",
+              "images": [
+                "infant_mortality_district_trend_1.png",
+                "infant_mortality_district_trend_2.png"
+              ]
+            }
+          ]
         },
         {
-          "id": "eastern_districts",
-          "title": "🌅 Eastern Province Districts",
-          "content": "Detailed analysis of crude incidence trends in Kailahun, Kenema, and Kono districts.",
-          "images": [
-            "crude_incidence_trend_KAILAHUN.png",
-            "crude_incidence_trend_KENEMA.png"
-          ],
-          "enabled": true
+          "id": "neonatal_mortality",
+          "name": "Taux de Mortalité Néonatale",
+          "description": "Taux de mortalité pour les nouveau-nés",
+          "age_group": "0-28 jours",
+          "unit": "pour 1 000 naissances vivantes",
+          "enabled": true,
+          "levels": [
+            {
+              "id": "neonatal_national",
+              "name": "National",
+              "images": [
+                "neonatal_mortality_national_trend_1.png",
+                "neonatal_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "neonatal_regional",
+              "name": "Régional",
+              "images": [
+                "neonatal_mortality_regional_trend_1.png",
+                "neonatal_mortality_regional_trend_2.png"
+              ]
+            },
+            {
+              "id": "neonatal_district",
+              "name": "District",
+              "images": [
+                "neonatal_mortality_district_trend_1.png",
+                "neonatal_mortality_district_trend_2.png"
+              ]
+            }
+          ]
         },
         {
-          "id": "eastern_maps",
-          "title": "🗺️ Eastern Province Chiefdom Maps",
-          "content": "Chiefdom-level crude incidence mapping for Eastern Province districts.",
-          "images": [
-            "subplot_all_chiefdoms_KAILAHUN.png",
-            "subplot_all_chiefdoms_KENEMA.png"
-          ],
-          "enabled": true
+          "id": "maternal_mortality",
+          "name": "Taux de Mortalité Maternelle",
+          "description": "Taux de mortalité pour les mères pendant la grossesse, l'accouchement et le post-partum",
+          "age_group": "âge reproductif",
+          "unit": "pour 100 000 naissances vivantes",
+          "enabled": true,
+          "levels": [
+            {
+              "id": "maternal_national",
+              "name": "National",
+              "images": [
+                "maternal_mortality_national_trend_1.png",
+                "maternal_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "maternal_regional",
+              "name": "Régional",
+              "images": [
+                "maternal_mortality_regional_trend_1.png",
+                "maternal_mortality_regional_trend_2.png"
+              ]
+            },
+            {
+              "id": "maternal_district",
+              "name": "District",
+              "images": [
+                "maternal_mortality_district_trend_1.png",
+                "maternal_mortality_district_trend_2.png"
+              ]
+            }
+          ]
         },
         {
-          "id": "northern_districts",
-          "title": "🧭 Northern Province Districts",
-          "content": "Analysis of crude incidence patterns in Northern Province including Bombali, Falaba, Koinadugu, and Tonkolili.",
-          "images": [
-            "crude_incidence_trend_BOMBALI.png",
-            "crude_incidence_trend_FALABA.png"
-          ],
-          "enabled": true
+          "id": "child_mortality_5_14",
+          "name": "Taux de Mortalité des Enfants de 5 à 14 ans",
+          "description": "Taux de mortalité pour les enfants âgés de 5 à 14 ans",
+          "age_group": "5-14 ans",
+          "unit": "pour 1 000 population",
+          "enabled": true,
+          "levels": [
+            {
+              "id": "child_5_14_national",
+              "name": "National",
+              "images": [
+                "child_5_14_mortality_national_trend_1.png",
+                "child_5_14_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "child_5_14_regional",
+              "name": "Régional",
+              "images": [
+                "child_5_14_mortality_regional_trend_1.png",
+                "child_5_14_mortality_regional_trend_2.png"
+              ]
+            },
+            {
+              "id": "child_5_14_district",
+              "name": "District",
+              "images": [
+                "child_5_14_mortality_district_trend_1.png",
+                "child_5_14_mortality_district_trend_2.png"
+              ]
+            }
+          ]
         },
         {
-          "id": "northwest_districts",
-          "title": "🌊 Northwest Districts",
-          "content": "Crude incidence trends in Kambia, Karene, and Port Loko districts.",
-          "images": [
-            "crude_incidence_trend_KAMBIA.png",
-            "crude_incidence_trend_KARENE.png"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "southern_districts",
-          "title": "🌴 Southern Province Districts",
-          "content": "Southern Province malaria trends including Bo, Bonthe, Moyamba, and Pujehun.",
-          "images": [
-            "crude_incidence_trend_BO.png",
-            "crude_incidence_trend_BONTHE.png"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "western_districts",
-          "title": "🏙️ Western Area Districts",
-          "content": "Urban and rural Western Area crude incidence analysis.",
-          "images": [
-            "crude_incidence_trend_WESTERN RURAL.png",
-            "crude_incidence_trend_WESTERN URBAN.png"
-          ],
-          "enabled": true
-        },
-        {
-          "id": "chie_analysis",
-          "title": "📈 CHIE Analysis by Region",
-          "content": "CHIE (Chiefdom Health Information Exchange) subplot analysis across key districts.",
-          "images": [
-            "crude_incidence_CHIE_subplots_KAILAHUN.png",
-            "crude_incidence_CHIE_subplots_KENEMA.png"
-          ],
-          "enabled": true
-        }
-      ]
-    },
-    {
-      "id": "suspected_cases",
-      "name": "Suspected Cases",
-      "enabled": true,
-      "sections": [
-        {
-          "id": "suspected_overview",
-          "title": "🔍 Suspected Cases Overview",
-          "content": "Analysis of suspected malaria cases reporting patterns and trends across all districts.",
-          "enabled": true
-        },
-        {
-          "id": "suspected_trends",
-          "title": "📈 Suspected Cases Trends",
-          "content": "Temporal analysis of suspected malaria case reporting by district and region.",
-          "enabled": true
+          "id": "adult_mortality",
+          "name": "Taux de Mortalité des Adultes",
+          "description": "Taux de mortalité pour les adultes",
+          "age_group": "15+ ans",
+          "unit": "pour 1 000 population",
+          "enabled": true,
+          "levels": [
+            {
+              "id": "adult_national",
+              "name": "National",
+              "images": [
+                "adult_mortality_national_trend_1.png",
+                "adult_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "adult_regional",
+              "name": "Régional",
+              "images": [
+                "adult_mortality_regional_trend_1.png",
+                "adult_mortality_regional_trend_2.png"
+              ]
+            },
+            {
+              "id": "adult_district",
+              "name": "District",
+              "images": [
+                "adult_mortality_district_trend_1.png",
+                "adult_mortality_district_trend_2.png"
+              ]
+            }
+          ]
         }
       ]
     }
   ],
-  
   "settings": {
     "default_tab": "overview",
     "navigation_collapsed": true,
