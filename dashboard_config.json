@@ -58,6 +58,69 @@
       ]
     },
     {
+      "id": "data_analysis",
+      "name": "Data Analysis",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "data_overview",
+          "title": "📊 Data Quality & Sources",
+          "content": "Analysis of malaria surveillance data quality and reporting systems.",
+          "enabled": true,
+          "sections": [
+            {
+              "id": "dhis2_analysis",
+              "title": "DHIS2 Performance",
+              "content": "Assessment of DHIS2 data completeness and reporting quality.",
+              "enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trends_analysis",
+      "name": "Trends Analysis",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "temporal_patterns",
+          "title": "📈 Temporal Patterns",
+          "content": "Analysis of malaria trends over time and seasonal patterns.",
+          "enabled": true,
+          "sections": [
+            {
+              "id": "seasonal_trends",
+              "title": "Seasonal Variations",
+              "content": "Monthly and seasonal malaria case distribution patterns.",
+              "enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interventions",
+      "name": "Interventions",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "prevention_programs",
+          "title": "🛡️ Prevention Programs",
+          "content": "Assessment of malaria prevention intervention effectiveness.",
+          "enabled": true,
+          "sections": [
+            {
+              "id": "itn_sbd_impact",
+              "title": "ITN & SBD Impact",
+              "content": "Evaluation of ITN distribution and School-Based Distribution program outcomes.",
+              "enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "impact_indicators",
       "name": "Impact Indicators",
       "enabled": true,
