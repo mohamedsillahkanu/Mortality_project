@@ -200,6 +200,685 @@
                   "images": ["method.png", "image.png"]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "maladies_respiratoires",
+          "title": "Maladies Respiratoires",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique des maladies respiratoires",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Létalité",
+              "description": "Analyse de la létalité des maladies respiratoires",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Prévalence des Cas",
+              "description": "Analyse de la prévalence des maladies respiratoires",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "maladies_diarrheiques",
+          "title": "Maladies Diarrhéiques",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique des maladies diarrhéiques",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Létalité",
+              "description": "Analyse de la létalité des maladies diarrhéiques",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Morbidité",
+              "description": "Analyse de la morbidité des maladies diarrhéiques",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "malnutrition_aigue_severe",
+          "title": "Malnutrition Aiguë Sévère",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "Mortalité",
+              "description": "Analyse de la mortalité liée à la malnutrition aiguë sévère",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Létalité",
+              "description": "Analyse de la létalité de la malnutrition aiguë sévère",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Prévalence de la Malnutrition",
+              "description": "Analyse de la prévalence de la malnutrition",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Prévalence Générale",
+              "description": "Analyse de la prévalence générale de la malnutrition",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "anemie",
+          "title": "Anémie",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique de l'anémie",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Létalité chez les Cas Sévères",
+              "description": "Analyse de la létalité de l'anémie chez les cas sévères",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "infections_neonatales",
+          "title": "Infections Néonatales",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "Mortalité Néonatale Attribuable",
+              "description": "Analyse de la mortalité néonatale attribuable aux infections",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Létalité en Milieu Hospitalier",
+              "description": "Analyse de la létalité des infections néonatales en milieu hospitalier",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indicateurs_letalite",
+      "name": "Indicateurs de Létalité",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "letalite_paludisme",
+          "title": "Létalité du Paludisme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_respiratoire",
+          "title": "Létalité des Maladies Respiratoires",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_diarrheique",
+          "title": "Létalité des Maladies Diarrhéiques",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_malnutrition",
+          "title": "Létalité de la Malnutrition Aiguë Sévère",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_anemie",
+          "title": "Létalité de l'Anémie",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_hemorragies",
+          "title": "Létalité des Hémorragies chez la Femme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_infections_neonatales",
+          "title": "Létalité des Infections Néonatales",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "default_tab": "overview",
+    "navigation_collapsed": true,
+    "sections_collapsed": true,
+    "show_placeholders": false,
+    "image_hover_effects": true,
+    "auto_collapse_navigation": true
+  }
+}obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Létalité",
+              "description": "Analyse de la létalité du paludisme",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Proportion de Cas Confirmés",
+              "description": "Analyse de la proportion des cas confirmés de paludisme",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "{
+  "dashboard": {
+    "title": "Renforcer les preuves de la performance des systèmes de santé au Burkina Faso",
+    "subtitle": "Analyse de tendance de la mortalite et morbidite",
+    "organization": "",
+    "tagline": ""
+  },
+  "logos": [
+    {
+      "id": "burkina",
+      "src": "MOH.png",
+      "alt": "Burkina Logo",
+      "enabled": true    
+    },
+    {
+      "id": "northwestern",
+      "src": "NU.png",
+      "alt": "Northwestern University Logo",
+      "enabled": true
+    },
+    {
+      "id": "irss",
+      "src": "IRSS.png",
+      "alt": "IRSS Logo",
+      "enabled": true
+    }
+  ],
+  "tabs": [
+    {
+      "id": "overview",
+      "name": "Overview",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "introduction",
+          "title": "Introduction",
+          "content": " ",
+          "enabled": true
+        },
+        {
+          "id": "objectives",
+          "title": "Objectifs",
+          "content": "<h3 style='color: #2c5282; margin-bottom: 15px;'>1.1 Objectif général</h3><p style='margin-bottom: 20px; font-size: 16px; line-height: 1.6;'>Analyser les tendances de la mortalité et de la morbidité au Burkina Faso.</p><h3 style='color: #2c5282; margin-bottom: 15px;'>1.2. Objectifs spécifiques</h3><p style='margin-bottom: 15px; font-style: italic;'>Les objectifs spécifiques sont :</p><br>• <strong>Évolution temporelle des indicateurs de mortalité :</strong> Évaluer l'évolution temporelle des indicateurs de mortalité au niveau national, régional et des districts, en analysant les tendances sur plusieurs années pour identifier les patterns de changement et les variations géographiques significatives ;<br><br>• <strong>Analyse comparative des tendances régionales :</strong> Comparer les tendances dans les régions/districts aux tendances nationales selon les différentes sources de données, afin d'identifier les disparités territoriales et les facteurs explicatifs des variations observées ;<br><br>• <strong>Analyse différentielle de la mortalité :</strong> Comparer les tendances des différents indicateurs de mortalité (mortalité néonatale, infantile, maternelle, des enfants de moins de 5 ans et toutes causes confondues), en examinant les corrélations et les divergences entre ces indicateurs pour une compréhension globale de la santé publique ;<br><br>• <strong>Évolution de la morbidité par contexte épidémiologique :</strong> Analyser l'évolution des indicateurs de morbidité au niveau national, régional et des districts en se concentrant sur les maladies les plus pertinentes dans le contexte Burkinabè (paludisme, infections respiratoires, maladies diarrhéiques, malnutrition), avec une attention particulière aux variations saisonnières et géographiques ;<br><br>• <strong>Analyse de corrélation mortalité-morbidité :</strong> Identifier les indicateurs de morbidité qui présentent des tendances similaires à celles des indicateurs de mortalité, et ceux qui diffèrent, afin de mieux comprendre la relation entre mortalité et morbidité dans les différentes régions et d'orienter les interventions de santé publique de manière plus ciblée.",
+          "enabled": true
+        },
+        {
+          "id": "indicators_tab",
+          "title": "Indicateurs",
+          "subtitle": "",
+          "content": "<h3>Tableau 1 : Liste des indicateurs de mortalite</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité infanto-juvénile</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total d'enfants de moins de 5 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité infantile</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès des enfants de 0 à 11 mois</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes de la période</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité néonatale</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de 0 à 28 jours</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes de la période</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de décès maternel</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès maternels</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de parturientes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité chez les 5-14 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'enfants de 5-14 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des 5-14 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de mortalité chez les adultes</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de décès d'adultes</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des adultes</td></tr></tbody></table><h3>Tableau 2 : Liste des indicateurs de mortalité spécifique</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique du paludisme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus au paludisme grave</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des maladies respiratoires (Pneumonie)</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies respiratoires</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique de la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique de l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Population totale</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des femmes enceintes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Mortalité spécifique des infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de naissances vivantes</td></tr></tbody></table><h3>Tableau 3 : Liste des indicateurs de létalité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité du paludisme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus au paludisme grave</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de paludisme</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des maladies respiratoires (Pneumonie)</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies respiratoires</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de maladies respiratoires</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux maladies diarrhéiques</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de maladies diarrhéiques</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité de la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à la malnutrition aiguë sévère</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de malnutrition aiguë sévère</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité de l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus à l'anémie</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'anémie</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux hémorragies chez la femme</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'hémorragies chez la femme</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Létalité des infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de cas de décès dus aux infections néonatales</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'infections néonatales</td></tr></tbody></table><h3>Tableau 4 : Liste des indicateurs de morbidité</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de fièvre au cours des deux dernières semaines chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de fièvre au cours des deux dernières semaines chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale enfants de 0-59 mois</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de fièvre au cours des trente derniers jours par tranche d'âge de la population, région, sexe et milieu de résidence</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas de fièvre au cours des trente derniers jours par tranche d'âge de la population</td><td style='border: 1px solid #000; padding: 8px;'>Population totale spécifique (par tranche d'âge, par région et par sexe)</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des cas de paludisme confirmé chez les enfants de moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas confirmés de paludisme (simple et grave) adultes, femmes enceintes)</td><td style='border: 1px solid #000; padding: 8px;'>Population totale enfants de 0-59 mois</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Prévalence de l'anémie chez les enfants de 6-59 mois</td><td style='border: 1px solid #000; padding: 8px;'>Nombre total de cas d'anémie chez les enfants de 6-59 mois</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des enfants de 6-59 mois</td></tr></tbody></table><h3>Tableau 5 : Indicateurs de malnutrition</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Degré de sévérité</strong></th><th colspan='3' style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Malnutrition (Référence de croissance internationale OMS 2006)</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Insuffisance Pondérale</strong></th></tr><tr style='background-color: #f9f9f9;'><th style='border: 1px solid #000; padding: 8px;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Aiguë</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'><strong>Chronique</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'></th></tr><tr style='background-color: #f9f9f9;'><th style='border: 1px solid #000; padding: 8px;'></th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Poids/Taille (P/T)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Périmètre brachial (PB)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Taille Age (T/A)</th><th style='border: 1px solid #000; padding: 8px; text-align: center;'>Poids Age (P/A)</th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Globale</strong></td><td style='border: 1px solid #000; padding: 8px;'>P/T < -2 Zsc et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>PB < 125 mm et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>T/A < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>P/A < -2 Zsc</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Modérée</strong></td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ P/T < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>115mm≤PB<125mm</td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ T/A < -2 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>-3 Zsc≤ P/A < -2 Zsc</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'><strong>Sévère</strong></td><td style='border: 1px solid #000; padding: 8px;'>P/T < -3 Zsc et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>PB < 115 mm et/ou œdèmes</td><td style='border: 1px solid #000; padding: 8px;'>T/A < -3 Zsc</td><td style='border: 1px solid #000; padding: 8px;'>P/A < -3 Zsc</td></tr></tbody></table><h3>Tableau 6 : Liste des indicateurs d'utilisation et de couverture des services de santé</h3><table style='width: 100%; border-collapse: collapse; border: 1px solid #000; margin-bottom: 30px;'><thead><tr style='background-color: #f5f5f5;'><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Indicateurs</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Numérateur</strong></th><th style='border: 1px solid #000; padding: 8px; text-align: left;'><strong>Dénominateur</strong></th></tr></thead><tbody><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de femmes vues en consultation prénatale au premier trimestre</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de CPN1 au premier trimestre</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de grossesses attendues</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Taux de couverture en CPN4</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en CPN4</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en CPN1</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion d'accouchements</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements attendus</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion des femmes vues en consultation post-natale à la sixième semaine</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de femmes vues en consultation post-natale à la sixième semaine</td><td style='border: 1px solid #000; padding: 8px;'>Accouchements</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de nouvelles consultations chez les moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de consultants des moins de 5 ans</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des moins de 5 ans</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Proportion de nouvelles consultations chez les adultes</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de consultants des adultes</td><td style='border: 1px solid #000; padding: 8px;'>Population totale des adultes</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Rayon moyen d'action théorique</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Nombre de CSPS</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td><td style='border: 1px solid #000; padding: 8px;'>Non applicable</td></tr><tr><td style='border: 1px solid #000; padding: 8px;'>Ratio habitants/CSPS</td><td style='border: 1px solid #000; padding: 8px;'>Nombre d'habitants</td><td style='border: 1px solid #000; padding: 8px;'>Nombre de CSPS</td></tr></tbody></table>",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "vue_ensemble",
+      "name": "Indicateurs de Mortalite",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "mortalite_infanto_juvenile",
+          "title": "Taux de Mortalité Infanto-Juvénile",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_infantile",
+          "title": "Taux de Mortalité Infantile",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_neonatale",
+          "title": "Taux de Mortalité Néonatale",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_maternelle",
+          "title": "Taux de Mortalité Maternelle",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_5_14_ans",
+          "title": "Taux de Mortalité des Enfants de 5 à 14 ans",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_adultes",
+          "title": "Taux de Mortalité des Adultes",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pathologies_prioritaires",
+      "name": "Pathologies Prioritaires",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "paludisme",
+          "title": "Paludisme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique du paludisme",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
               "title": "Létalité",
