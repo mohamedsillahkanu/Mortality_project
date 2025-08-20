@@ -182,7 +182,7 @@
             border-left: 5px solid #0066cc;
         }
 
-        /* Collapsible Sections */
+        /* Level 1: Main Sections (Pathologies) */
         .collapsible-section {
             margin-bottom: 30px;
             border: 2px solid rgba(0, 102, 204, 0.2);
@@ -234,10 +234,10 @@
             padding: 20px;
         }
 
-        /* Subsection Styles */
+        /* Level 2: Indicator Subsections (Mortalité Spécifique, Létalité, etc.) */
         .collapsible-subsection {
             margin: 15px 0;
-            margin-left: 20px; /* Indent subsections */
+            margin-left: 20px;
             border: 1px solid rgba(0, 102, 204, 0.3);
             border-radius: 10px;
             overflow: hidden;
@@ -291,15 +291,64 @@
             padding: 15px;
         }
 
-        /* Adjust content text within subsections */
-        .subsection-content .content-text {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.8);
-            border-left: 3px solid rgba(0, 102, 204, 0.5);
-            font-size: 1em;
+        /* Level 3: Geographic Level Subsections (National, Regional, District) */
+        .collapsible-sub-subsection {
+            margin: 10px 0;
+            margin-left: 15px;
+            border: 1px solid rgba(0, 102, 204, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0, 102, 204, 0.05);
+            background: rgba(255, 255, 255, 0.7);
         }
 
+        .sub-subsection-toggle {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.6), rgba(0, 68, 153, 0.6));
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid rgba(0, 102, 204, 0.8);
+        }
+
+        .sub-subsection-toggle:hover {
+            background: linear-gradient(135deg, rgba(0, 68, 153, 0.7), rgba(0, 102, 204, 0.7));
+            border-left: 3px solid #004499;
+        }
+
+        .sub-subsection-toggle::after {
+            content: '▸';
+            font-size: 0.9em;
+            transition: transform 0.3s ease;
+        }
+
+        .sub-subsection-toggle.collapsed::after {
+            transform: rotate(90deg);
+        }
+
+        .sub-subsection-content {
+            background: rgba(255, 255, 255, 0.95);
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 0;
+            border-left: 2px solid rgba(0, 102, 204, 0.15);
+        }
+
+        .sub-subsection-content.expanded {
+            max-height: none;
+            padding: 10px;
+        }
+
+        /* Content text styling for all levels */
         .content-text {
             font-size: 1.1em;
             line-height: 1.6;
@@ -309,6 +358,22 @@
             background: rgba(255, 255, 255, 0.7);
             border-radius: 10px;
             border-left: 4px solid #0066cc;
+        }
+
+        .subsection-content .content-text {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-left: 3px solid rgba(0, 102, 204, 0.5);
+            font-size: 1em;
+        }
+
+        .sub-subsection-content .content-text {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 2px solid rgba(0, 102, 204, 0.3);
+            font-size: 0.95em;
         }
 
         .placeholder-content {
@@ -469,14 +534,27 @@
             .collapsible-subsection {
                 margin-left: 10px;
             }
+
+            .collapsible-sub-subsection {
+                margin-left: 8px;
+            }
             
             .subsection-toggle {
                 padding: 12px 15px;
                 font-size: 1em;
             }
+
+            .sub-subsection-toggle {
+                padding: 10px 12px;
+                font-size: 0.9em;
+            }
             
             .subsection-content.expanded {
                 padding: 10px;
+            }
+
+            .sub-subsection-content.expanded {
+                padding: 8px;
             }
         }
 
@@ -508,6 +586,14 @@
             .image-placeholder {
                 height: 250px;
                 font-size: 0.9em;
+            }
+
+            .collapsible-subsection {
+                margin-left: 5px;
+            }
+
+            .collapsible-sub-subsection {
+                margin-left: 5px;
             }
         }
     </style>
@@ -558,10 +644,10 @@
         // Default configuration - this will be loaded from the JSON file
         let dashboardConfig = {
             dashboard: {
-                title: "Malaria Program Review (MPR)",
-                subtitle: "Analysis and System Design",
-                organization: "Informatics Consultancy Firm Sierra Leone (ICF-SL)",
-                tagline: "A local firm with international standards"
+                title: "Renforcer les preuves de la performance des systèmes de santé au Burkina Faso",
+                subtitle: "Analyse de tendance de la mortalite et morbidite",
+                organization: "",
+                tagline: ""
             },
             logos: [],
             tabs: [],
@@ -632,7 +718,7 @@
             });
         }
 
-        // Render individual section
+        // Render individual section (Level 1 - Pathologies)
         function renderSection(section) {
             const sectionDiv = document.createElement('div');
             sectionDiv.className = 'collapsible-section';
@@ -656,7 +742,7 @@
                 contentDiv.appendChild(textDiv);
             }
             
-            // Add subsections if they exist
+            // Add subsections if they exist (Level 2 - Indicators)
             if (section.subsections && section.subsections.length > 0) {
                 section.subsections.forEach(subsection => {
                     const subsectionDiv = renderSubsection(subsection);
@@ -664,35 +750,9 @@
                 });
             }
             
-            // Add images if they exist
+            // Add images if they exist (for backward compatibility)
             if (section.images && section.images.length > 0) {
-                const gridDiv = document.createElement('div');
-                gridDiv.className = 'content-grid';
-                
-                section.images.forEach(imageSrc => {
-                    const rowDiv = document.createElement('div');
-                    rowDiv.className = 'content-row';
-                    
-                    const imageContainer = document.createElement('div');
-                    imageContainer.className = 'image-container';
-                    
-                    const img = document.createElement('img');
-                    img.src = imageSrc;
-                    img.alt = imageSrc;
-                    img.className = 'dashboard-image';
-                    img.onerror = function() {
-                        // Replace with placeholder if image fails to load
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'image-placeholder';
-                        placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
-                        this.parentNode.replaceChild(placeholder, this);
-                    };
-                    
-                    imageContainer.appendChild(img);
-                    rowDiv.appendChild(imageContainer);
-                    gridDiv.appendChild(rowDiv);
-                });
-                
+                const gridDiv = createImageGrid(section.images);
                 contentDiv.appendChild(gridDiv);
             }
             
@@ -700,7 +760,7 @@
             return sectionDiv;
         }
 
-        // New function to render subsections
+        // Render Level 2 subsections (Indicators like Mortalité Spécifique, Létalité, etc.)
         function renderSubsection(subsection) {
             const subsectionDiv = document.createElement('div');
             subsectionDiv.className = 'collapsible-subsection';
@@ -716,7 +776,15 @@
             const contentDiv = document.createElement('div');
             contentDiv.className = 'subsection-content';
             
-            // Add text content
+            // Add description if exists
+            if (subsection.description) {
+                const textDiv = document.createElement('div');
+                textDiv.className = 'content-text';
+                textDiv.innerHTML = subsection.description.replace(/\n/g, '<br>');
+                contentDiv.appendChild(textDiv);
+            }
+
+            // Add text content if exists (backward compatibility)
             if (subsection.content) {
                 const textDiv = document.createElement('div');
                 textDiv.className = 'content-text';
@@ -724,39 +792,95 @@
                 contentDiv.appendChild(textDiv);
             }
             
-            // Add images for subsection
-            if (subsection.images && subsection.images.length > 0) {
-                const gridDiv = document.createElement('div');
-                gridDiv.className = 'content-grid';
-                
-                subsection.images.forEach(imageSrc => {
-                    const rowDiv = document.createElement('div');
-                    rowDiv.className = 'content-row';
-                    
-                    const imageContainer = document.createElement('div');
-                    imageContainer.className = 'image-container';
-                    
-                    const img = document.createElement('img');
-                    img.src = imageSrc;
-                    img.alt = imageSrc;
-                    img.className = 'dashboard-image';
-                    img.onerror = function() {
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'image-placeholder';
-                        placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
-                        this.parentNode.replaceChild(placeholder, this);
-                    };
-                    
-                    imageContainer.appendChild(img);
-                    rowDiv.appendChild(imageContainer);
-                    gridDiv.appendChild(rowDiv);
+            // Add Level 3 indicators (National, Regional, District)
+            if (subsection.indicators && subsection.indicators.length > 0) {
+                subsection.indicators.forEach(indicator => {
+                    const indicatorDiv = renderSubSubsection(indicator);
+                    contentDiv.appendChild(indicatorDiv);
                 });
-                
+            }
+
+            // Add old-style subsections if they exist (backward compatibility)
+            if (subsection.subsections && subsection.subsections.length > 0) {
+                subsection.subsections.forEach(subSubsection => {
+                    const subSubsectionDiv = renderSubSubsection(subSubsection);
+                    contentDiv.appendChild(subSubsectionDiv);
+                });
+            }
+            
+            // Add images for subsection (backward compatibility)
+            if (subsection.images && subsection.images.length > 0) {
+                const gridDiv = createImageGrid(subsection.images);
                 contentDiv.appendChild(gridDiv);
             }
             
             subsectionDiv.appendChild(contentDiv);
             return subsectionDiv;
+        }
+
+        // Render Level 3 subsections (Geographic levels: National, Regional, District)
+        function renderSubSubsection(subSubsection) {
+            const subSubsectionDiv = document.createElement('div');
+            subSubsectionDiv.className = 'collapsible-sub-subsection';
+            
+            // Sub-subsection toggle button
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'sub-subsection-toggle collapsed';
+            toggleButton.textContent = subSubsection.name || subSubsection.title;
+            toggleButton.onclick = function() { toggleSubSubsection(this); };
+            subSubsectionDiv.appendChild(toggleButton);
+            
+            // Sub-subsection content
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'sub-subsection-content';
+            
+            // Add text content if exists
+            if (subSubsection.content) {
+                const textDiv = document.createElement('div');
+                textDiv.className = 'content-text';
+                textDiv.innerHTML = subSubsection.content.replace(/\n/g, '<br>');
+                contentDiv.appendChild(textDiv);
+            }
+            
+            // Add images for sub-subsection
+            if (subSubsection.images && subSubsection.images.length > 0) {
+                const gridDiv = createImageGrid(subSubsection.images);
+                contentDiv.appendChild(gridDiv);
+            }
+            
+            subSubsectionDiv.appendChild(contentDiv);
+            return subSubsectionDiv;
+        }
+
+        // Helper function to create image grids
+        function createImageGrid(images) {
+            const gridDiv = document.createElement('div');
+            gridDiv.className = 'content-grid';
+            
+            images.forEach(imageSrc => {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'content-row';
+                
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'image-container';
+                
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = imageSrc;
+                img.className = 'dashboard-image';
+                img.onerror = function() {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'image-placeholder';
+                    placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
+                    this.parentNode.replaceChild(placeholder, this);
+                };
+                
+                imageContainer.appendChild(img);
+                rowDiv.appendChild(imageContainer);
+                gridDiv.appendChild(rowDiv);
+            });
+            
+            return gridDiv;
         }
 
         // Tab and section control functions
@@ -794,6 +918,7 @@
             }
         }
 
+        // Tab and section control functions
         function toggleTabs() {
             const tabNav = document.getElementById("tabNavigation");
             tabNav.classList.toggle("collapsed");
@@ -812,8 +937,22 @@
             }
         }
 
-        // New function to toggle subsections
+        // Function to toggle Level 2 subsections (Indicators)
         function toggleSubsection(button) {
+            const content = button.nextElementSibling;
+            const isCollapsed = content.classList.contains("expanded");
+            
+            if (isCollapsed) {
+                content.classList.remove("expanded");
+                button.classList.add("collapsed");
+            } else {
+                content.classList.add("expanded");
+                button.classList.remove("collapsed");
+            }
+        }
+
+        // Function to toggle Level 3 subsections (Geographic levels)
+        function toggleSubSubsection(button) {
             const content = button.nextElementSibling;
             const isCollapsed = content.classList.contains("expanded");
             
@@ -845,10 +984,10 @@
                     // Use minimal default config if file not found
                     dashboardConfig = {
                         dashboard: {
-                            title: "Malaria Program Review (MPR)",
-                            subtitle: "Analysis and System Design",
-                            organization: "Informatics Consultancy Firm Sierra Leone (ICF-SL)",
-                            tagline: "A local firm with international standards"
+                            title: "Renforcer les preuves de la performance des systèmes de santé au Burkina Faso",
+                            subtitle: "Analyse de tendance de la mortalite et morbidite",
+                            organization: "",
+                            tagline: ""
                         },
                         tabs: [],
                         settings: {
