@@ -54,7 +54,7 @@
     },
     {
       "id": "global_mortality_indicators",
-      "name": "Indicateurs de Mortalité Globale et Paludisme",
+      "name": "Indicateurs de Mortalité",
       "description": "Indicateurs complets de mortalité incluant les taux de mortalité globale et les indicateurs spécifiques au paludisme pour le Burkina Faso",
       "enabled": true,
       "categories": [
