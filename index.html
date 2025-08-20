@@ -94,16 +94,17 @@
             border: 1px solid rgba(0, 102, 204, 0.2);
         }
 
-        /* Tab Navigation */
+        /* Main Tab Navigation */
         .tab-navigation {
             display: flex;
             flex-wrap: wrap;
             border-bottom: 3px solid #0066cc;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             gap: 5px;
+            position: relative;
         }
 
-        .tab-button {
+        .main-tab-button {
             background: rgba(0, 102, 204, 0.1);
             border: none;
             padding: 15px 25px;
@@ -118,16 +119,118 @@
             position: relative;
         }
 
-        .tab-button:hover {
+        .main-tab-button:hover {
             background: rgba(0, 102, 204, 0.2);
             color: #0066cc;
         }
 
-        .tab-button.active {
+        .main-tab-button.active {
             background: #0066cc;
             color: white;
             border-bottom: 3px solid #0066cc;
             transform: translateY(3px);
+        }
+
+        /* Sub Tab Navigation */
+        .sub-tab-navigation {
+            background: rgba(0, 102, 204, 0.05);
+            border: 2px solid rgba(0, 102, 204, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .sub-tab-navigation.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sub-tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sub-tab-button {
+            background: rgba(0, 102, 204, 0.1);
+            border: 2px solid rgba(0, 102, 204, 0.2);
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #004499;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .sub-tab-button:hover {
+            background: rgba(0, 102, 204, 0.2);
+            border-color: rgba(0, 102, 204, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .sub-tab-button.active {
+            background: #004499;
+            color: white;
+            border-color: #004499;
+            box-shadow: 0 4px 12px rgba(0, 68, 153, 0.3);
+        }
+
+        /* Level Tab Navigation */
+        .level-tab-navigation {
+            background: rgba(0, 68, 153, 0.05);
+            border: 1px solid rgba(0, 68, 153, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .level-tab-navigation.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .level-tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .level-tab-button {
+            background: rgba(0, 68, 153, 0.1);
+            border: 1px solid rgba(0, 68, 153, 0.2);
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: #2c5282;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .level-tab-button:hover {
+            background: rgba(0, 68, 153, 0.15);
+            border-color: rgba(0, 68, 153, 0.3);
+        }
+
+        .level-tab-button.active {
+            background: #2c5282;
+            color: white;
+            border-color: #2c5282;
         }
 
         /* Collapsible Tab Button */
@@ -155,12 +258,30 @@
         }
 
         /* Tab Content */
-        .tab-content {
+        .main-tab-content {
             display: none;
             animation: fadeIn 0.3s ease-in;
         }
 
-        .tab-content.active {
+        .main-tab-content.active {
+            display: block;
+        }
+
+        .sub-tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .sub-tab-content.active {
+            display: block;
+        }
+
+        .level-tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .level-tab-content.active {
             display: block;
         }
 
@@ -182,63 +303,181 @@
             border-left: 5px solid #0066cc;
         }
 
-        /* Collapsible Sections */
-        .collapsible-section {
-            margin-bottom: 30px;
-            border: 2px solid rgba(0, 102, 204, 0.2);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+        .sub-section-header {
+            color: #004499;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(0, 68, 153, 0.08);
+            border-radius: 10px;
+            border-left: 4px solid #004499;
         }
 
-        .section-toggle {
-            background: linear-gradient(135deg, #0066cc, #004499);
-            color: white;
-            border: none;
-            padding: 20px;
-            width: 100%;
-            text-align: left;
-            cursor: pointer;
-            font-size: 1.3em;
-            font-weight: 600;
+        .level-section-header {
+            color: #2c5282;
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            padding: 12px;
+            background: rgba(44, 82, 130, 0.06);
+            border-radius: 8px;
+            border-left: 3px solid #2c5282;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
             transition: all 0.3s ease;
+            background: white;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 102, 204, 0.25);
+        }
+
+        .dashboard-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dashboard-image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            border: 3px dashed #0066cc;
+            border-radius: 12px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #0066cc;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-placeholder:hover {
+            background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 100%);
+            border-color: #004499;
+            transform: translateY(-3px);
+        }
+
+        .image-placeholder::before {
+            content: '📸';
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .image-placeholder .placeholder-text {
+            padding: 0 15px;
+            line-height: 1.4;
+        }
+
+        /* Modal for image popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
 
-        .section-toggle:hover {
-            background: linear-gradient(135deg, #004499, #0066cc);
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .section-toggle::after {
-            content: '▼';
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
             font-size: 1.2em;
-            transition: transform 0.3s ease;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .section-toggle.collapsed::after {
-            transform: rotate(-90deg);
-        }
-
-        .section-content {
-            background: rgba(255, 255, 255, 0.95);
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.5s ease;
-            padding: 0;
-        }
-
-        .section-content.expanded {
-            max-height: none;
-            padding: 20px;
+        .modal-close:hover {
+            background: #ff6666;
+            transform: scale(1.1);
         }
 
         .content-text {
             font-size: 1.1em;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.7);
             border-radius: 10px;
@@ -253,95 +492,6 @@
             border: 2px dashed #0066cc;
             color: #004499;
             font-size: 1.2em;
-        }
-
-        /* Dashboard Content */
-        .content-grid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin-top: 40px;
-            min-height: auto;
-        }
-
-        .content-row {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            min-height: auto;
-        }
-
-        .image-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            min-height: auto;
-            overflow: visible;
-        }
-
-        .dashboard-image {
-            max-width: 100%;
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .dashboard-image:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 102, 204, 0.3);
-        }     
-
-        .github-info {
-            background: rgba(0, 102, 204, 0.1);
-            border: 2px solid rgba(0, 102, 204, 0.3);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 40px;
-            text-align: center;
-            color: #004499;
-            font-size: 1.1em;
-        }
-
-        /* Image placeholder styling */
-        .image-placeholder {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
-            border: 3px dashed #0066cc;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #0066cc;
-            font-size: 1.2em;
-            font-weight: 600;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-placeholder::before {
-            content: '📸';
-            font-size: 3em;
-            margin-bottom: 15px;
-            opacity: 0.7;
-        }
-
-        .image-placeholder .placeholder-text {
-            padding: 0 20px;
-        }
-
-        /* Config management - Hidden */
-        .config-panel {
-            display: none;
         }
 
         /* Responsive Design */
@@ -371,33 +521,38 @@
                 flex-direction: column;
             }
 
-            .tab-button {
+            .main-tab-button {
                 border-radius: 10px;
                 margin-bottom: 5px;
                 padding: 12px 20px;
                 font-size: 0.9em;
             }
 
-            .tab-button.active {
+            .main-tab-button.active {
                 transform: none;
             }
 
-            .content-grid {
-                gap: 25px;
+            .sub-tab-buttons, .level-tab-buttons {
+                flex-direction: column;
             }
 
-            .image-placeholder {
-                height: 300px;
-                font-size: 1em;
+            .sub-tab-button, .level-tab-button {
+                text-align: center;
             }
 
-            .image-placeholder::before {
-                font-size: 2em;
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            .config-panel {
-                position: relative;
-                margin-bottom: 20px;
+            .image-placeholder,
+            .dashboard-image {
+                height: 200px;
+            }
+
+            .modal-content {
+                max-width: 95%;
+                max-height: 85%;
             }
         }
 
@@ -408,11 +563,6 @@
                 gap: 15px;
             }
             
-            .logo-container {
-                width: 140px;
-                height: 90px;
-            }
-
             .main-title {
                 font-size: 1.8em;
             }
@@ -421,256 +571,553 @@
                 padding: 20px;
             }
 
-            .tab-button {
+            .main-tab-button {
                 padding: 10px 15px;
                 font-size: 0.8em;
             }
 
-            .image-placeholder {
-                height: 250px;
-                font-size: 0.9em;
+            .sub-tab-button {
+                padding: 10px 15px;
+                font-size: 0.8em;
+            }
+
+            .level-tab-button {
+                padding: 8px 12px;
+                font-size: 0.75em;
+            }
+
+            .image-placeholder,
+            .dashboard-image {
+                height: 180px;
             }
         }
     </style>
 </head>
 <body>
-
-
     <div class="header">
         <div class="header-content">
-            <!-- Logo Section for 2 logos -->
-            <div class="logo-section">
-                <div class="logo-container">
-                    <img src="MOH.png" alt="CHAI Logo" class="logo-image">
-                </div>
-
-                <div class="logo-container">
-                    <img src="NU.png" alt="ICF-SL Logo" class="logo-image">
-                </div>
-
-                <div class="logo-container">
-                    <img src="IRSS.png" alt="ICF-SL Logo" class="logo-image">
-                </div>
+            <div class="logo-section" id="logoSection">
+                <!-- Logos will be dynamically generated -->
             </div>
             
-            <!-- Title Section -->
             <div class="title-section">
-                <h1 class="main-title">Renforcer les preuves de la performance des systèmes de santé au Burkina Faso</h1>
-                <h2 class="subtitle">Analyse de tendance de la mortalite et morbidite</h2>
-               
+                <h1 class="main-title" id="mainTitle">Loading...</h1>
+                <h2 class="subtitle" id="subtitle">Loading...</h2>
             </div>
         </div>
     </div>
 
     <div class="dashboard-container">
-        <!-- Tab Toggle Button -->
         <button class="tab-toggle-btn" onclick="toggleTabs()">☰ Toggle Navigation Tabs</button>
         
-        <!-- Tab Navigation -->
-        <div class="tab-navigation collapsed" id="tabNavigation">
-            <!-- Tabs will be dynamically generated -->
+        <!-- Main Tab Navigation -->
+        <div class="tab-navigation" id="tabNavigation">
+            <!-- Main tabs will be dynamically generated -->
         </div>
 
-        <!-- Tab Contents -->
-        <div id="tabContent">
-            <!-- Tab contents will be dynamically generated -->
+        <!-- Sub Tab Navigations -->
+        <div id="subTabNavigations">
+            <!-- Sub tab navigations will be dynamically generated -->
+        </div>
+
+        <!-- Level Tab Navigations -->
+        <div id="levelTabNavigations">
+            <!-- Level tab navigations will be dynamically generated -->
+        </div>
+
+        <!-- Content Container -->
+        <div id="contentContainer">
+            <!-- All content will be dynamically generated -->
+        </div>
+    </div>
+
+    <!-- Modal for image popup -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeImageModal()">&times;</button>
+            <img id="modalImage" class="modal-image" src="" alt="Image">
         </div>
     </div>
 
     <script>
-        // Default configuration - this will be loaded from the JSON file
-        let dashboardConfig = {
-            dashboard: {
-                title: "Malaria Program Review (MPR)",
-                subtitle: "Analysis and System Design",
-                organization: "Informatics Consultancy Firm Sierra Leone (ICF-SL)",
-                tagline: "A local firm with international standards"
-            },
-            logos: [],
-            tabs: [],
-            settings: {
-                default_tab: "overview",
-                navigation_collapsed: true,
-                sections_collapsed: true,
-                show_placeholders: true,
-                image_hover_effects: true,
-                auto_collapse_navigation: true
-            }
-        };
+        let dashboardConfig = {};
+        let currentMainTab = '';
+        let currentSubTab = {};
+        let currentLevel = {};
 
         // Initialize the dashboard
         function initializeDashboard() {
-            renderTabs();
-            renderTabContent();
+            renderLogos();
+            renderTitles();
+            renderMainTabs();
+            renderSubTabNavigations();
+            renderContent();
             
-            // Always default to Overview tab
-            openTabById('overview');
+            // Open the default tab
+            if (dashboardConfig.tabs && dashboardConfig.tabs.length > 0) {
+                const defaultTab = dashboardConfig.tabs.find(tab => tab.id === dashboardConfig.settings?.default_tab) || dashboardConfig.tabs[0];
+                openMainTab(defaultTab.id);
+            }
         }
 
-        // Render tab navigation
-        function renderTabs() {
+        // Render logos
+        function renderLogos() {
+            const logoSection = document.getElementById('logoSection');
+            logoSection.innerHTML = '';
+            
+            if (dashboardConfig.logos) {
+                dashboardConfig.logos.forEach(logo => {
+                    if (logo.enabled) {
+                        const logoContainer = document.createElement('div');
+                        logoContainer.className = 'logo-container';
+                        logoContainer.innerHTML = `<img src="${logo.src}" alt="${logo.alt}" class="logo-image">`;
+                        logoSection.appendChild(logoContainer);
+                    }
+                });
+            }
+        }
+
+        // Render titles
+        function renderTitles() {
+            if (dashboardConfig.dashboard) {
+                document.getElementById('mainTitle').textContent = dashboardConfig.dashboard.title || 'Dashboard';
+                document.getElementById('subtitle').textContent = dashboardConfig.dashboard.subtitle || '';
+            }
+        }
+
+        // Render main tabs
+        function renderMainTabs() {
             const tabNavigation = document.getElementById('tabNavigation');
             tabNavigation.innerHTML = '';
             
-            dashboardConfig.tabs.filter(tab => tab.enabled).forEach((tab) => {
-                const button = document.createElement('button');
-                button.className = `tab-button ${tab.id === 'overview' ? 'active' : ''}`;
-                button.textContent = tab.name;
-                button.onclick = () => openTabById(tab.id);
-                tabNavigation.appendChild(button);
-            });
-        }
-
-        // Render tab content
-        function renderTabContent() {
-            const tabContent = document.getElementById('tabContent');
-            tabContent.innerHTML = '';
-            
-            dashboardConfig.tabs.filter(tab => tab.enabled).forEach((tab) => {
-                const tabDiv = document.createElement('div');
-                tabDiv.id = tab.id;
-                tabDiv.className = `tab-content ${tab.id === 'overview' ? 'active' : ''}`;
-                
-                // Add section header
-                const sectionHeader = document.createElement('div');
-                sectionHeader.className = 'section-header';
-                sectionHeader.textContent = tab.name;
-                tabDiv.appendChild(sectionHeader);
-                
-                // Add sections
-                if (tab.sections && tab.sections.length > 0) {
-                    tab.sections.filter(section => section.enabled).forEach(section => {
-                        const sectionDiv = renderSection(section);
-                        tabDiv.appendChild(sectionDiv);
-                    });
-                } else {
-                    // Add placeholder if no sections
-                    const placeholder = document.createElement('div');
-                    placeholder.className = 'placeholder-content';
-                    placeholder.textContent = `${tab.name} content will be added here`;
-                    tabDiv.appendChild(placeholder);
-                }
-                
-                tabContent.appendChild(tabDiv);
-            });
-        }
-
-        // Render individual section
-        function renderSection(section) {
-            const sectionDiv = document.createElement('div');
-            sectionDiv.className = 'collapsible-section';
-            
-            // Section toggle button
-            const toggleButton = document.createElement('button');
-            toggleButton.className = 'section-toggle collapsed';
-            toggleButton.textContent = section.title;
-            toggleButton.onclick = function() { toggleSection(this); };
-            sectionDiv.appendChild(toggleButton);
-            
-            // Section content
-            const contentDiv = document.createElement('div');
-            contentDiv.className = 'section-content';
-            
-            // Add text content if exists
-            if (section.content) {
-                const textDiv = document.createElement('div');
-                textDiv.className = 'content-text';
-                textDiv.innerHTML = section.content.replace(/\n/g, '<br>');
-                contentDiv.appendChild(textDiv);
-            }
-            
-            // Add images if they exist
-            if (section.images && section.images.length > 0) {
-                const gridDiv = document.createElement('div');
-                gridDiv.className = 'content-grid';
-                
-                section.images.forEach(imageSrc => {
-                    const rowDiv = document.createElement('div');
-                    rowDiv.className = 'content-row';
-                    
-                    const imageContainer = document.createElement('div');
-                    imageContainer.className = 'image-container';
-                    
-                    const img = document.createElement('img');
-                    img.src = imageSrc;
-                    img.alt = imageSrc;
-                    img.className = 'dashboard-image';
-                    img.onerror = function() {
-                        // Replace with placeholder if image fails to load
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'image-placeholder';
-                        placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
-                        this.parentNode.replaceChild(placeholder, this);
-                    };
-                    
-                    imageContainer.appendChild(img);
-                    rowDiv.appendChild(imageContainer);
-                    gridDiv.appendChild(rowDiv);
+            if (dashboardConfig.tabs) {
+                dashboardConfig.tabs.forEach(tab => {
+                    if (tab.enabled) {
+                        const button = document.createElement('button');
+                        button.className = 'main-tab-button';
+                        button.textContent = tab.name;
+                        button.onclick = () => openMainTab(tab.id);
+                        tabNavigation.appendChild(button);
+                    }
                 });
-                
-                contentDiv.appendChild(gridDiv);
             }
-            
-            sectionDiv.appendChild(contentDiv);
-            return sectionDiv;
         }
 
-        // Tab and section control functions
-        function openTabById(tabId) {
-            // Hide all tab contents
-            const tabcontents = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabcontents.length; i++) {
-                tabcontents[i].classList.remove("active");
+        // Render sub tab navigations
+        function renderSubTabNavigations() {
+            const subTabContainer = document.getElementById('subTabNavigations');
+            subTabContainer.innerHTML = '';
+            
+            if (dashboardConfig.tabs) {
+                dashboardConfig.tabs.forEach(tab => {
+                    if (tab.enabled && tab.has_submenu && tab.submenu) {
+                        const subNavDiv = document.createElement('div');
+                        subNavDiv.className = 'sub-tab-navigation';
+                        subNavDiv.id = `subTabNav-${tab.id}`;
+                        
+                        const subButtonsDiv = document.createElement('div');
+                        subButtonsDiv.className = 'sub-tab-buttons';
+                        
+                        tab.submenu.forEach(subTab => {
+                            if (subTab.enabled) {
+                                const button = document.createElement('button');
+                                button.className = 'sub-tab-button';
+                                button.textContent = subTab.name;
+                                button.onclick = () => openSubTab(tab.id, subTab.id);
+                                subButtonsDiv.appendChild(button);
+                            }
+                        });
+                        
+                        subNavDiv.appendChild(subButtonsDiv);
+                        subTabContainer.appendChild(subNavDiv);
+                        
+                        // Create level navigations for this tab's submenu
+                        createLevelNavigations(tab);
+                    }
+                });
+            }
+        }
+
+        // Create level navigations
+        function createLevelNavigations(mainTab) {
+            const levelContainer = document.getElementById('levelTabNavigations');
+            
+            if (mainTab.submenu) {
+                mainTab.submenu.forEach(subTab => {
+                    if (subTab.enabled && subTab.has_levels && subTab.levels) {
+                        const levelNavDiv = document.createElement('div');
+                        levelNavDiv.className = 'level-tab-navigation';
+                        levelNavDiv.id = `levelTabNav-${mainTab.id}-${subTab.id}`;
+                        
+                        const levelButtonsDiv = document.createElement('div');
+                        levelButtonsDiv.className = 'level-tab-buttons';
+                        
+                        subTab.levels.forEach(level => {
+                            if (level.enabled) {
+                                const button = document.createElement('button');
+                                button.className = 'level-tab-button';
+                                button.textContent = level.name;
+                                button.onclick = () => openLevel(mainTab.id, subTab.id, level.id);
+                                levelButtonsDiv.appendChild(button);
+                            }
+                        });
+                        
+                        levelNavDiv.appendChild(levelButtonsDiv);
+                        levelContainer.appendChild(levelNavDiv);
+                    }
+                });
+            }
+        }
+
+        // Render content
+        function renderContent() {
+            const contentContainer = document.getElementById('contentContainer');
+            contentContainer.innerHTML = '';
+            
+            if (dashboardConfig.tabs) {
+                dashboardConfig.tabs.forEach(tab => {
+                    if (tab.enabled) {
+                        const mainTabDiv = document.createElement('div');
+                        mainTabDiv.id = tab.id;
+                        mainTabDiv.className = 'main-tab-content';
+                        
+                        // Add section header
+                        const sectionHeader = document.createElement('div');
+                        sectionHeader.className = 'section-header';
+                        sectionHeader.textContent = tab.name;
+                        mainTabDiv.appendChild(sectionHeader);
+                        
+                        if (tab.has_submenu && tab.submenu) {
+                            // Create sub tab content containers
+                            tab.submenu.forEach(subTab => {
+                                if (subTab.enabled) {
+                                    const subTabDiv = document.createElement('div');
+                                    subTabDiv.id = `${tab.id}-${subTab.id}`;
+                                    subTabDiv.className = 'sub-tab-content';
+                                    
+                                    const subSectionHeader = document.createElement('div');
+                                    subSectionHeader.className = 'sub-section-header';
+                                    subSectionHeader.textContent = subTab.name;
+                                    subTabDiv.appendChild(subSectionHeader);
+                                    
+                                    if (subTab.has_levels && subTab.levels) {
+                                        // Create level content containers
+                                        subTab.levels.forEach(level => {
+                                            if (level.enabled) {
+                                                const levelDiv = document.createElement('div');
+                                                levelDiv.id = `${tab.id}-${subTab.id}-${level.id}`;
+                                                levelDiv.className = 'level-tab-content';
+                                                
+                                                const levelHeader = document.createElement('div');
+                                                levelHeader.className = 'level-section-header';
+                                                levelHeader.textContent = level.name;
+                                                levelDiv.appendChild(levelHeader);
+                                                
+                                                // Add image placeholders
+                                                if (level.data_sources && level.data_sources.length > 0) {
+                                                    const imageGrid = document.createElement('div');
+                                                    imageGrid.className = 'image-grid';
+                                                    
+                                                    level.data_sources.forEach(imageSrc => {
+                                                        const imageContainer = document.createElement('div');
+                                                        imageContainer.className = 'image-container';
+                                                        
+                                                        const placeholder = document.createElement('div');
+                                                        placeholder.className = 'image-placeholder';
+                                                        placeholder.onclick = () => openImageModal(imageSrc);
+                                                        placeholder.innerHTML = `<div class="placeholder-text">${imageSrc}</div>`;
+                                                        
+                                                        imageContainer.appendChild(placeholder);
+                                                        imageGrid.appendChild(imageContainer);
+                                                    });
+                                                    
+                                                    levelDiv.appendChild(imageGrid);
+                                                } else {
+                                                    // Add default placeholders
+                                                    const imageGrid = document.createElement('div');
+                                                    imageGrid.className = 'image-grid';
+                                                    
+                                                    for (let i = 1; i <= 2; i++) {
+                                                        const imageContainer = document.createElement('div');
+                                                        imageContainer.className = 'image-container';
+                                                        
+                                                        const placeholder = document.createElement('div');
+                                                        placeholder.className = 'image-placeholder';
+                                                        const imageName = `${tab.id}_${subTab.id}_${level.id}_${i}.png`;
+                                                        placeholder.onclick = () => openImageModal(imageName);
+                                                        placeholder.innerHTML = `<div class="placeholder-text">${imageName}</div>`;
+                                                        
+                                                        imageContainer.appendChild(placeholder);
+                                                        imageGrid.appendChild(imageContainer);
+                                                    }
+                                                    
+                                                    levelDiv.appendChild(imageGrid);
+                                                }
+                                                
+                                                subTabDiv.appendChild(levelDiv);
+                                            }
+                                        });
+                                    } else {
+                                        // Add default content for sub tabs without levels
+                                        const placeholder = document.createElement('div');
+                                        placeholder.className = 'placeholder-content';
+                                        placeholder.textContent = `Contenu pour ${subTab.name} sera ajouté ici`;
+                                        subTabDiv.appendChild(placeholder);
+                                    }
+                                    
+                                    mainTabDiv.appendChild(subTabDiv);
+                                }
+                            });
+                        } else if (tab.sections) {
+                            // Handle sections for tabs without submenu (like overview)
+                            tab.sections.forEach(section => {
+                                if (section.enabled) {
+                                    const sectionDiv = document.createElement('div');
+                                    sectionDiv.className = 'content-text';
+                                    sectionDiv.innerHTML = section.content || `Contenu pour ${section.title}`;
+                                    mainTabDiv.appendChild(sectionDiv);
+                                }
+                            });
+                        } else {
+                            // Add placeholder content
+                            const placeholder = document.createElement('div');
+                            placeholder.className = 'placeholder-content';
+                            placeholder.textContent = `Contenu pour ${tab.name} sera ajouté ici`;
+                            mainTabDiv.appendChild(placeholder);
+                        }
+                        
+                        contentContainer.appendChild(mainTabDiv);
+                    }
+                });
+            }
+        }
+
+        // Navigation functions
+        function openMainTab(tabId) {
+            // Hide all main tab contents
+            const mainTabContents = document.getElementsByClassName("main-tab-content");
+            for (let i = 0; i < mainTabContents.length; i++) {
+                mainTabContents[i].classList.remove("active");
             }
             
-            // Remove active class from all tab buttons
-            const tabbuttons = document.getElementsByClassName("tab-button");
-            for (let i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].classList.remove("active");
+            // Remove active class from all main tab buttons
+            const mainTabButtons = document.getElementsByClassName("main-tab-button");
+            for (let i = 0; i < mainTabButtons.length; i++) {
+                mainTabButtons[i].classList.remove("active");
             }
+
+            // Hide all sub tab navigations
+            const subTabNavs = document.querySelectorAll(".sub-tab-navigation");
+            subTabNavs.forEach(nav => nav.classList.remove("active"));
             
-            // Show the selected tab content
+            // Hide all level navigations
+            const levelTabNavs = document.querySelectorAll(".level-tab-navigation");
+            levelTabNavs.forEach(nav => nav.classList.remove("active"));
+            
+            // Show the selected main tab content
             const targetTab = document.getElementById(tabId);
             if (targetTab) {
                 targetTab.classList.add("active");
             }
             
-            // Mark the corresponding button as active
-            const buttons = document.querySelectorAll('.tab-button');
+            // Mark the corresponding main tab button as active
+            const buttons = document.querySelectorAll('.main-tab-button');
             buttons.forEach(button => {
                 if (button.textContent === dashboardConfig.tabs.find(tab => tab.id === tabId)?.name) {
                     button.classList.add('active');
                 }
             });
             
-            // Auto-collapse navigation if setting is enabled
-            if (dashboardConfig.settings.auto_collapse_navigation) {
+            // Show the corresponding sub tab navigation if it exists
+            const subTabNav = document.getElementById(`subTabNav-${tabId}`);
+            if (subTabNav) {
+                subTabNav.classList.add("active");
+            }
+
+            // Set current main tab
+            currentMainTab = tabId;
+
+            // Show the default sub tab for this main tab if it has submenu
+            const mainTabConfig = dashboardConfig.tabs.find(tab => tab.id === tabId);
+            if (mainTabConfig && mainTabConfig.has_submenu && mainTabConfig.submenu && mainTabConfig.submenu.length > 0) {
+                const firstSubTab = mainTabConfig.submenu.find(sub => sub.enabled);
+                if (firstSubTab) {
+                    openSubTab(tabId, firstSubTab.id);
+                }
+            }
+            
+            // Auto-collapse navigation
+            if (dashboardConfig.settings?.auto_collapse_navigation) {
                 const tabNav = document.getElementById("tabNavigation");
                 tabNav.classList.add("collapsed");
             }
         }
 
+        // Sub tab navigation
+        function openSubTab(mainTab, subTab) {
+            // Hide all sub tab contents for this main tab
+            const subTabContents = document.querySelectorAll(`#${mainTab} .sub-tab-content`);
+            subTabContents.forEach(content => content.classList.remove("active"));
+            
+            // Remove active class from all sub tab buttons for this main tab
+            const subTabNav = document.getElementById(`subTabNav-${mainTab}`);
+            if (subTabNav) {
+                const subTabButtons = subTabNav.getElementsByClassName("sub-tab-button");
+                for (let i = 0; i < subTabButtons.length; i++) {
+                    subTabButtons[i].classList.remove("active");
+                }
+            }
+            
+            // Hide all level navigations
+            const levelTabNavs = document.querySelectorAll(".level-tab-navigation");
+            levelTabNavs.forEach(nav => nav.classList.remove("active"));
+            
+            // Show the selected sub tab content
+            const targetSubTab = document.getElementById(`${mainTab}-${subTab}`);
+            if (targetSubTab) {
+                targetSubTab.classList.add("active");
+            }
+            
+            // Mark the corresponding sub tab button as active
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                // If called programmatically, find and activate the correct button
+                const subTabButtons = document.querySelectorAll(`#subTabNav-${mainTab} .sub-tab-button`);
+                const subTabConfig = dashboardConfig.tabs.find(tab => tab.id === mainTab)?.submenu?.find(sub => sub.id === subTab);
+                if (subTabConfig) {
+                    subTabButtons.forEach(button => {
+                        if (button.textContent === subTabConfig.name) {
+                            button.classList.add('active');
+                        }
+                    });
+                }
+            }
+
+            // Show level navigation if this sub tab has levels
+            const levelTabNav = document.getElementById(`levelTabNav-${mainTab}-${subTab}`);
+            if (levelTabNav) {
+                levelTabNav.classList.add("active");
+            }
+
+            // Update current sub tab
+            currentSubTab[mainTab] = subTab;
+
+            // Show the default level for this sub tab if it has levels
+            const mainTabConfig = dashboardConfig.tabs.find(tab => tab.id === mainTab);
+            const subTabConfig = mainTabConfig?.submenu?.find(sub => sub.id === subTab);
+            if (subTabConfig && subTabConfig.has_levels && subTabConfig.levels && subTabConfig.levels.length > 0) {
+                const firstLevel = subTabConfig.levels.find(level => level.enabled);
+                if (firstLevel) {
+                    openLevel(mainTab, subTab, firstLevel.id);
+                }
+            }
+        }
+
+        // Level tab navigation
+        function openLevel(mainTab, subTab, level) {
+            // Hide all level contents for this sub tab
+            const levelContents = document.querySelectorAll(`#${mainTab}-${subTab} .level-tab-content`);
+            levelContents.forEach(content => content.classList.remove("active"));
+            
+            // Remove active class from all level tab buttons for this sub tab
+            const levelTabNav = document.getElementById(`levelTabNav-${mainTab}-${subTab}`);
+            if (levelTabNav) {
+                const levelTabButtons = levelTabNav.getElementsByClassName("level-tab-button");
+                for (let i = 0; i < levelTabButtons.length; i++) {
+                    levelTabButtons[i].classList.remove("active");
+                }
+            }
+            
+            // Show the selected level content
+            const targetLevel = document.getElementById(`${mainTab}-${subTab}-${level}`);
+            if (targetLevel) {
+                targetLevel.classList.add("active");
+            }
+            
+            // Mark the corresponding level tab button as active
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                // If called programmatically, find and activate the correct button
+                const levelTabButtons = document.querySelectorAll(`#levelTabNav-${mainTab}-${subTab} .level-tab-button`);
+                const mainTabConfig = dashboardConfig.tabs.find(tab => tab.id === mainTab);
+                const subTabConfig = mainTabConfig?.submenu?.find(sub => sub.id === subTab);
+                const levelConfig = subTabConfig?.levels?.find(lvl => lvl.id === level);
+                if (levelConfig) {
+                    levelTabButtons.forEach(button => {
+                        if (button.textContent === levelConfig.name) {
+                            button.classList.add('active');
+                        }
+                    });
+                }
+            }
+
+            // Update current level
+            if (!currentLevel[mainTab]) currentLevel[mainTab] = {};
+            currentLevel[mainTab][subTab] = level;
+        }
+
+        // Toggle tabs visibility
         function toggleTabs() {
             const tabNav = document.getElementById("tabNavigation");
             tabNav.classList.toggle("collapsed");
         }
 
-        function toggleSection(button) {
-            const content = button.nextElementSibling;
-            const isCollapsed = content.classList.contains("expanded");
+        // Image modal functions
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
             
-            if (isCollapsed) {
-                content.classList.remove("expanded");
-                button.classList.add("collapsed");
-            } else {
-                content.classList.add("expanded");
-                button.classList.remove("collapsed");
-            }
+            // Try to load the actual image first
+            const img = new Image();
+            img.onload = function() {
+                modalImage.src = imageSrc;
+                modal.classList.add('active');
+            };
+            img.onerror = function() {
+                // If image doesn't exist, show placeholder in modal
+                modalImage.src = 'data:image/svg+xml;base64,' + btoa(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+                        <rect width="800" height="600" fill="#f0f8ff" stroke="#0066cc" stroke-width="3" stroke-dasharray="10,5"/>
+                        <text x="400" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#0066cc">
+                            📸
+                        </text>
+                        <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0066cc">
+                            Image: ${imageSrc}
+                        </text>
+                        <text x="400" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#004499">
+                            (Image will be displayed when available)
+                        </text>
+                    </svg>
+                `);
+                modal.classList.add('active');
+            };
+            img.src = imageSrc;
         }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
 
         // Initialize the dashboard when the page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Automatically load configuration from dashboard_config.json
+            // Try to load configuration from dashboard_config.json
             fetch('dashboard_config.json')
                 .then(response => {
                     if (!response.ok) {
@@ -683,22 +1130,165 @@
                     initializeDashboard();
                 })
                 .catch(error => {
-                    console.log('Could not load dashboard_config.json, using default configuration');
-                    // Use minimal default config if file not found
+                    console.log('Could not load dashboard_config.json, using embedded configuration');
+                    // Use the provided JSON configuration as fallback
                     dashboardConfig = {
-                        dashboard: {
-                            title: "Malaria Program Review (MPR)",
-                            subtitle: "Analysis and System Design",
-                            organization: "Informatics Consultancy Firm Sierra Leone (ICF-SL)",
-                            tagline: "A local firm with international standards"
+                        "dashboard": {
+                            "title": "Renforcer les preuves de la performance des systèmes de santé au Burkina Faso",
+                            "subtitle": "Analyse de tendance de la mortalite et morbidite",
+                            "organization": "",
+                            "tagline": ""
                         },
-                        tabs: [],
-                        settings: {
-                            default_tab: "overview",
-                            navigation_collapsed: true,
-                            sections_collapsed: true
+                        "logos": [
+                            {
+                                "id": "burkina",
+                                "src": "MOH.png",
+                                "alt": "Burkina Logo",
+                                "enabled": true    
+                            },
+                            {
+                                "id": "northwestern",
+                                "src": "NU.png",
+                                "alt": "Northwestern University Logo",
+                                "enabled": true
+                            },
+                            {
+                                "id": "irss",
+                                "src": "IRSS.png",
+                                "alt": "IRSS Logo",
+                                "enabled": true
+                            }
+                        ],
+                        "tabs": [
+                            {
+                                "id": "overview",
+                                "name": "Overview",
+                                "enabled": true,
+                                "has_submenu": false,
+                                "sections": [
+                                    {
+                                        "id": "introduction",
+                                        "title": "Introduction",
+                                        "content": " ",
+                                        "enabled": true
+                                    },
+                                    {
+                                        "id": "objectives",
+                                        "title": "Objectifs",
+                                        "content": "<h3 style='color: #2c5282; margin-bottom: 15px;'>1.1 Objectif général</h3><p style='margin-bottom: 20px; font-size: 16px; line-height: 1.6;'>Analyser les tendances de la mortalité et de la morbidité au Burkina Faso.</p>",
+                                        "enabled": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "settings": {
+                            "default_tab": "overview",
+                            "navigation_collapsed": false,
+                            "sections_collapsed": false,
+                            "show_placeholders": true,
+                            "image_hover_effects": true,
+                            "auto_collapse_navigation": true
                         }
                     };
+                    
+                    // Try to parse the full configuration from the document if available
+                    try {
+                        const configFromDoc = JSON.parse(`{
+  "dashboard": {
+    "title": "Renforcer les preuves de la performance des systèmes de santé au Burkina Faso",
+    "subtitle": "Analyse de tendance de la mortalite et morbidite",
+    "organization": "",
+    "tagline": ""
+  },
+  "logos": [
+    {
+      "id": "burkina",
+      "src": "MOH.png",
+      "alt": "Burkina Logo",
+      "enabled": true    
+    },
+    {
+      "id": "northwestern",
+      "src": "NU.png",
+      "alt": "Northwestern University Logo",
+      "enabled": true
+    },
+    {
+      "id": "irss",
+      "src": "IRSS.png",
+      "alt": "IRSS Logo",
+      "enabled": true
+    }
+  ],
+  "tabs": [
+    {
+      "id": "overview",
+      "name": "Overview",
+      "enabled": true,
+      "has_submenu": false,
+      "sections": [
+        {
+          "id": "introduction",
+          "title": "Introduction",
+          "content": " ",
+          "enabled": true
+        },
+        {
+          "id": "objectives",
+          "title": "Objectifs",
+          "content": "<h3 style='color: #2c5282; margin-bottom: 15px;'>1.1 Objectif général</h3><p style='margin-bottom: 20px; font-size: 16px; line-height: 1.6;'>Analyser les tendances de la mortalité et de la morbidité au Burkina Faso.</p><h3 style='color: #2c5282; margin-bottom: 15px;'>1.2. Objectifs spécifiques</h3><p style='margin-bottom: 15px; font-style: italic;'>Les objectifs spécifiques sont :</p><br>• <strong>Évolution temporelle des indicateurs de mortalité :</strong> Évaluer l'évolution temporelle des indicateurs de mortalité au niveau national, régional et des districts, en analysant les tendances sur plusieurs années pour identifier les patterns de changement et les variations géographiques significatives ;<br><br>• <strong>Analyse comparative des tendances régionales :</strong> Comparer les tendances dans les régions/districts aux tendances nationales selon les différentes sources de données, afin d'identifier les disparités territoriales et les facteurs explicatifs des variations observées ;<br><br>• <strong>Analyse différentielle de la mortalité :</strong> Comparer les tendances des différents indicateurs de mortalité (mortalité néonatale, infantile, maternelle, des enfants de moins de 5 ans et toutes causes confondues), en examinant les corrélations et les divergences entre ces indicateurs pour une compréhension globale de la santé publique ;<br><br>• <strong>Évolution de la morbidité par contexte épidémiologique :</strong> Analyser l'évolution des indicateurs de morbidité au niveau national, régional et des districts en se concentrant sur les maladies les plus pertinentes dans le contexte Burkinabè (paludisme, infections respiratoires, maladies diarrhéiques, malnutrition), avec une attention particulière aux variations saisonnières et géographiques ;<br><br>• <strong>Analyse de corrélation mortalité-morbidité :</strong> Identifier les indicateurs de morbidité qui présentent des tendances similaires à celles des indicateurs de mortalité, et ceux qui diffèrent, afin de mieux comprendre la relation entre mortalité et morbidité dans les différentes régions et d'orienter les interventions de santé publique de manière plus ciblée.",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "mortality_indicators",
+      "name": "Indicateurs de Mortalité",
+      "enabled": true,
+      "has_submenu": true,
+      "submenu": [
+        {
+          "id": "infant_juvenile_mortality",
+          "name": "Mortalité Infanto-Juvénile",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "infant_juvenile_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
+                "infant_juvenile_mortality_national_trend_1.png",
+                "infant_juvenile_mortality_national_trend_2.png"
+              ]
+            },
+            {
+              "id": "infant_juvenile_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
+                "infant_juvenile_mortality_regional_trend_1.png",
+                "infant_juvenile_mortality_regional_trend_2.png"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "default_tab": "overview",
+    "navigation_collapsed": false,
+    "auto_collapse_navigation": true
+  }
+}`);
+                        dashboardConfig = configFromDoc;
+                    } catch (e) {
+                        console.log('Using simplified configuration');
+                    }
+                    
                     initializeDashboard();
                 });
         });
