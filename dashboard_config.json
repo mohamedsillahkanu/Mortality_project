@@ -174,143 +174,358 @@
       ]
     },
     {
-      "id": "mortalite_specifique",
-      "name": "Mortalité Spécifique",
+      "id": "pathologies_prioritaires",
+      "name": "Pathologies Prioritaires",
       "enabled": true,
       "sections": [
         {
-          "id": "mortalite_paludisme",
-          "title": "Mortalité Spécifique du Paludisme",
+          "id": "paludisme",
+          "title": "Paludisme",
           "enabled": true,
           "subsections": [
             {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique du paludisme",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
+              "title": "Létalité",
+              "description": "Analyse de la létalité du paludisme",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
+              "title": "Proportion de Cas Confirmés",
+              "description": "Analyse de la proportion des cas confirmés de paludisme",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "mortalite_respiratoire",
-          "title": "Mortalité Spécifique des Maladies Respiratoires",
+          "id": "maladies_respiratoires",
+          "title": "Maladies Respiratoires",
           "enabled": true,
           "subsections": [
             {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique des maladies respiratoires",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
+              "title": "Létalité",
+              "description": "Analyse de la létalité des maladies respiratoires",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
+              "title": "Prévalence des Cas",
+              "description": "Analyse de la prévalence des maladies respiratoires",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "mortalite_diarrheique",
-          "title": "Mortalité Spécifique des Maladies Diarrhéiques",
+          "id": "maladies_diarrheiques",
+          "title": "Maladies Diarrhéiques",
           "enabled": true,
           "subsections": [
             {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique des maladies diarrhéiques",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
+              "title": "Létalité",
+              "description": "Analyse de la létalité des maladies diarrhéiques",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
+              "title": "Morbidité",
+              "description": "Analyse de la morbidité des maladies diarrhéiques",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "mortalite_malnutrition",
-          "title": "Mortalité Spécifique de la Malnutrition Aiguë Sévère",
+          "id": "malnutrition_aigue_severe",
+          "title": "Malnutrition Aiguë Sévère",
           "enabled": true,
           "subsections": [
             {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
+              "title": "Mortalité",
+              "description": "Analyse de la mortalité liée à la malnutrition aiguë sévère",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
+              "title": "Létalité",
+              "description": "Analyse de la létalité de la malnutrition aiguë sévère",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
+              "title": "Prévalence de la Malnutrition",
+              "description": "Analyse de la prévalence de la malnutrition",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            },
+            {
+              "title": "Prévalence Générale",
+              "description": "Analyse de la prévalence générale de la malnutrition",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "mortalite_anemie",
-          "title": "Mortalité Spécifique de l'Anémie",
+          "id": "anemie",
+          "title": "Anémie",
           "enabled": true,
           "subsections": [
             {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
+              "title": "Mortalité Spécifique",
+              "description": "Analyse de la mortalité spécifique de l'anémie",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
-            },
-            {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
+              "title": "Létalité chez les Cas Sévères",
+              "description": "Analyse de la létalité de l'anémie chez les cas sévères",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "mortalite_hemorragies",
-          "title": "Mortalité Spécifique des Hémorragies chez la Femme",
+          "id": "infections_neonatales",
+          "title": "Infections Néonatales",
           "enabled": true,
           "subsections": [
             {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
+              "title": "Mortalité Néonatale Attribuable",
+              "description": "Analyse de la mortalité néonatale attribuable aux infections",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
             },
             {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
-            },
-            {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
+              "title": "Létalité en Milieu Hospitalier",
+              "description": "Analyse de la létalité des infections néonatales en milieu hospitalier",
+              "indicators": [
+                {
+                  "name": "National",
+                  "images": ["obj1.png", "obj2.png"]
+                },
+                {
+                  "name": "Regional",
+                  "images": ["method.png", "image.png"]
+                },
+                {
+                  "name": "District",
+                  "images": ["method.png", "image.png"]
+                }
+              ]
+            }
           ]
-        },
-        {
-          "id": "mortalite_infections_neonatales",
-          "title": "Mortalité Spécifique des Infections Néonatales",
-          "enabled": true,
-          "subsections": [
-            {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
-            },
-            {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
-            },
-            {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
-          ]
-        }   
+        }
       ]
     },
     {
