@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortality Project</title>
+    <style>
+        * {
+            margin: 0;       
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0066cc 0%, #004499 50%, #ffffff 100%);
+            min-height: 100vh;
+            color: #333;
+            padding: 0;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #0066cc;
+            padding: 25px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0, 102, 204, 0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .logo-container {
+            width: 140px;
+            height: 90px;
+            border: 2px solid #0066cc;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: translateY(-3px);
+        }
+
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 8px;
+        }
+
+        .title-section {
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 3em;
+            color: #0066cc;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 102, 204, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            color: #004499;
+            font-weight: 400;
+        }
+
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0, 102, 204, 0.2);
+            border: 1px solid rgba(0, 102, 204, 0.2);
+        }
+
+        /* Tab Navigation */
+        .tab-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 3px solid #0066cc;
+            margin-bottom: 40px;
+            gap: 5px;
+        }
+
+        .tab-button {
+            background: rgba(0, 102, 204, 0.1);
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #004499;
+            border-radius: 10px 10px 0 0;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            margin-bottom: -3px;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            background: rgba(0, 102, 204, 0.2);
+            color: #0066cc;
+        }
+
+        .tab-button.active {
+            background: #0066cc;
+            color: white;
+            border-bottom: 3px solid #0066cc;
+            transform: translateY(3px);
+        }
+
+        /* Submenu Navigation */
+        .submenu-navigation {
+            background: rgba(0, 102, 204, 0.05);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .submenu-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .submenu-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .submenu-button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+        }
+
+        .submenu-button:hover {
+            background: #004499;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+        }
+
+        .submenu-button.active {
+            background: #004499;
+            box-shadow: 0 4px 15px rgba(0, 68, 153, 0.5);
+        }
+
+        /* Level Navigation */
+        .level-navigation {
+            background: rgba(0, 68, 153, 0.05);
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #004499;
+        }
+
+        .level-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #004499;
+            margin-bottom: 10px;
+        }
+
+        .level-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .level-button {
+            background: rgba(0, 68, 153, 0.1);
+            color: #004499;
+            border: 1px solid #004499;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .level-button:hover {
+            background: #004499;
+            color: white;
+        }
+
+        .level-button.active {
+            background: #004499;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 68, 153, 0.3);
+        }
+
+        /* Collapsible Tab Button */
+        .tab-toggle-btn {
+            background: #004499;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 68, 153, 0.3);
+        }
+
+        .tab-toggle-btn:hover {
+            background: #0066cc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+        }
+
+        .tab-navigation.collapsed {
+            display: none;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Content Sections */
+        .section-header {
+            color: #0066cc;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid #0066cc;
+        }
+
+        /* Collapsible Sections */
+        .collapsible-section {
+            margin-bottom: 30px;
+            border: 2px solid rgba(0, 102, 204, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+        }
+
+        .section-toggle {
+            background: linear-gradient(135deg, #0066cc, #004499);
+            color: white;
+            border: none;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.3em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-toggle:hover {
+            background: linear-gradient(135deg, #004499, #0066cc);
+        }
+
+        .section-toggle::after {
+            content: '▼';
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .section-toggle.collapsed::after {
+            transform: rotate(-90deg);
+        }
+
+        .section-content {
+            background: rgba(255, 255, 255, 0.95);
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            padding: 0;
+        }
+
+        .section-content.expanded {
+            max-height: none;
+            padding: 20px;
+        }
+
+        .content-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 102, 204, 0.05);
+            border-radius: 15px;
+            border: 2px dashed #0066cc;
+            color: #004499;
+            font-size: 1.2em;
+        }
+
+        /* Dashboard Content */
+        .content-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            min-height: auto;
+        }
+
+        .content-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            min-height: auto;
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            min-height: auto;
+            overflow: visible;
+        }
+
+        .dashboard-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .dashboard-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 102, 204, 0.3);
+        }     
+
+        .github-info {
+            background: rgba(0, 102, 204, 0.1);
+            border: 2px solid rgba(0, 102, 204, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+            color: #004499;
+            font-size: 1.1em;
+        }
+
+        /* Image placeholder styling */
+        .image-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            border: 3px dashed #0066cc;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #0066cc;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::before {
+            content: '📸';
+            font-size: 3em;
+            margin-bottom: 15px;
+            opacity: 0.7;
+        }
+
+        .image-placeholder .placeholder-text {
+            padding: 0 20px;
+        }
+
+        /* Navigation state indicators */
+        .navigation-breadcrumb {
+            background: rgba(0, 102, 204, 0.05);
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .breadcrumb-text {
+            color: #004499;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .breadcrumb-separator {
+            color: #0066cc;
+            margin: 0 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .logo-section {
+                justify-content: center;
+            }
+            
+            .logo-container {
+                width: 120px;
+                height: 80px;
+            }
+            
+            .dashboard-container {
+                padding: 30px;
+            }
+
+            .tab-navigation {
+                flex-direction: column;
+            }
+
+            .tab-button {
+                border-radius: 10px;
+                margin-bottom: 5px;
+                padding: 12px 20px;
+                font-size: 0.9em;
+            }
+
+            .tab-button.active {
+                transform: none;
+            }
+
+            .submenu-buttons, .level-buttons {
+                justify-content: center;
+            }
+
+            .submenu-button, .level-button {
+                font-size: 0.8em;
+                padding: 8px 15px;
+            }
+
+            .content-grid {
+                gap: 25px;
+            }
+
+            .image-placeholder {
+                height: 300px;
+                font-size: 1em;
+            }
+
+            .image-placeholder::before {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .logo-container {
+                width: 140px;
+                height: 90px;
+            }
+
+            .main-title {
+                font-size: 1.8em;
+            }
+
+            .dashboard-container {
+                padding: 20px;
+            }
+
+            .tab-button {
+                padding: 10px 15px;
+                font-size: 0.8em;
+            }
+
+            .image-placeholder {
+                height: 250px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-content">
+            <!-- Logo Section for logos -->
+            <div class="logo-section" id="logoSection">
+                <!-- Logos will be dynamically loaded -->
+            </div>
+            
+            <!-- Title Section -->
+            <div class="title-section">
+                <h1 class="main-title" id="mainTitle">Renforcer les preuves de la performance des systèmes de santé au Burkina Faso</h1>
+                <h2 class="subtitle" id="subtitle">Analyse de tendance de la mortalite et morbidite</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Tab Toggle Button -->
+        <button class="tab-toggle-btn" onclick="toggleTabs()">☰ Toggle Navigation Tabs</button>
+        
+        <!-- Navigation Breadcrumb -->
+        <div class="navigation-breadcrumb" id="breadcrumb" style="display: none;">
+            <span class="breadcrumb-text" id="breadcrumbText"></span>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <div class="tab-navigation collapsed" id="tabNavigation">
+            <!-- Tabs will be dynamically generated -->
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="tabContent">
+            <!-- Tab contents will be dynamically generated -->
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let dashboardConfig = {};
+        let currentTab = 'overview';
+        let currentSubmenu = null;
+        let currentLevel = null;
+
+        // Initialize the dashboard
+        function initializeDashboard() {
+            loadTitleAndLogos();
+            renderTabs();
+            renderTabContent();
+            
+            // Always default to Overview tab
+            openTabById('overview');
+        }
+
+        // Load title and logos from config
+        function loadTitleAndLogos() {
+            if (dashboardConfig.dashboard) {
+                document.getElementById('mainTitle').textContent = dashboardConfig.dashboard.title || 'Dashboard Title';
+                document.getElementById('subtitle').textContent = dashboardConfig.dashboard.subtitle || 'Dashboard Subtitle';
+            }
+
+            if (dashboardConfig.logos && dashboardConfig.logos.length > 0) {
+                const logoSection = document.getElementById('logoSection');
+                logoSection.innerHTML = '';
+                
+                dashboardConfig.logos.filter(logo => logo.enabled).forEach(logo => {
+                    const logoContainer = document.createElement('div');
+                    logoContainer.className = 'logo-container';
+                    
+                    const logoImage = document.createElement('img');
+                    logoImage.src = logo.src;
+                    logoImage.alt = logo.alt;
+                    logoImage.className = 'logo-image';
+                    logoImage.onerror = function() {
+                        this.style.display = 'none';
+                        logoContainer.style.display = 'none';
+                    };
+                    
+                    logoContainer.appendChild(logoImage);
+                    logoSection.appendChild(logoContainer);
+                });
+            }
+        }
+
+        // Render tab navigation
+        function renderTabs() {
+            const tabNavigation = document.getElementById('tabNavigation');
+            tabNavigation.innerHTML = '';
+            
+            dashboardConfig.tabs.filter(tab => tab.enabled).forEach((tab) => {
+                const button = document.createElement('button');
+                button.className = `tab-button ${tab.id === 'overview' ? 'active' : ''}`;
+                button.textContent = tab.name;
+                button.onclick = () => openTabById(tab.id);
+                tabNavigation.appendChild(button);
+            });
+        }
+
+        // Render tab content
+        function renderTabContent() {
+            const tabContent = document.getElementById('tabContent');
+            tabContent.innerHTML = '';
+            
+            dashboardConfig.tabs.filter(tab => tab.enabled).forEach((tab) => {
+                const tabDiv = document.createElement('div');
+                tabDiv.id = tab.id;
+                tabDiv.className = `tab-content ${tab.id === 'overview' ? 'active' : ''}`;
+                
+                // Add section header
+                const sectionHeader = document.createElement('div');
+                sectionHeader.className = 'section-header';
+                sectionHeader.textContent = tab.name;
+                tabDiv.appendChild(sectionHeader);
+                
+                // Handle different tab types
+                if (tab.has_submenu && tab.submenu && tab.submenu.length > 0) {
+                    // Tab with submenu
+                    renderSubmenuContent(tabDiv, tab);
+                } else if (tab.sections && tab.sections.length > 0) {
+                    // Regular tab with sections
+                    tab.sections.filter(section => section.enabled).forEach(section => {
+                        const sectionDiv = renderSection(section);
+                        tabDiv.appendChild(sectionDiv);
+                    });
+                } else {
+                    // Add placeholder if no content
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'placeholder-content';
+                    placeholder.textContent = `${tab.name} content will be added here`;
+                    tabDiv.appendChild(placeholder);
+                }
+                
+                tabContent.appendChild(tabDiv);
+            });
+        }
+
+        // Render submenu content
+        function renderSubmenuContent(tabDiv, tab) {
+            // Create submenu navigation
+            const submenuNav = document.createElement('div');
+            submenuNav.className = 'submenu-navigation';
+            submenuNav.id = `submenu-${tab.id}`;
+            
+            const submenuTitle = document.createElement('div');
+            submenuTitle.className = 'submenu-title';
+            submenuTitle.textContent = 'Sélectionner un indicateur:';
+            submenuNav.appendChild(submenuTitle);
+            
+            const submenuButtons = document.createElement('div');
+            submenuButtons.className = 'submenu-buttons';
+            
+            tab.submenu.filter(item => item.enabled).forEach((submenuItem, index) => {
+                const button = document.createElement('button');
+                button.className = `submenu-button ${index === 0 ? 'active' : ''}`;
+                button.textContent = submenuItem.name;
+                button.onclick = () => selectSubmenu(tab.id, submenuItem.id);
+                submenuButtons.appendChild(button);
+            });
+            
+            submenuNav.appendChild(submenuButtons);
+            tabDiv.appendChild(submenuNav);
+            
+            // Create containers for submenu content
+            tab.submenu.filter(item => item.enabled).forEach((submenuItem, index) => {
+                const submenuContent = document.createElement('div');
+                submenuContent.id = `submenu-content-${submenuItem.id}`;
+                submenuContent.style.display = index === 0 ? 'block' : 'none';
+                
+                if (submenuItem.has_levels && submenuItem.levels && submenuItem.levels.length > 0) {
+                    renderLevelContent(submenuContent, submenuItem);
+                } else {
+                    // Direct content without levels
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'placeholder-content';
+                    placeholder.textContent = `${submenuItem.name} charts will be displayed here`;
+                    submenuContent.appendChild(placeholder);
+                }
+                
+                tabDiv.appendChild(submenuContent);
+            });
+        }
+
+        // Render level content
+        function renderLevelContent(parentDiv, submenuItem) {
+            // Create level navigation
+            const levelNav = document.createElement('div');
+            levelNav.className = 'level-navigation';
+            
+            const levelTitle = document.createElement('div');
+            levelTitle.className = 'level-title';
+            levelTitle.textContent = 'Niveau d\'analyse:';
+            levelNav.appendChild(levelTitle);
+            
+            const levelButtons = document.createElement('div');
+            levelButtons.className = 'level-buttons';
+            
+            submenuItem.levels.filter(level => level.enabled).forEach((level, index) => {
+                const button = document.createElement('button');
+                button.className = `level-button ${index === 0 ? 'active' : ''}`;
+                button.textContent = level.name;
+                button.onclick = () => selectLevel(submenuItem.id, level.id);
+                levelButtons.appendChild(button);
+            });
+            
+            levelNav.appendChild(levelButtons);
+            parentDiv.appendChild(levelNav);
+            
+            // Create containers for level content
+            submenuItem.levels.filter(level => level.enabled).forEach((level, index) => {
+                const levelContent = document.createElement('div');
+                levelContent.id = `level-content-${level.id}`;
+                levelContent.style.display = index === 0 ? 'block' : 'none';
+                
+                if (level.data_sources && level.data_sources.length > 0) {
+                    const gridDiv = document.createElement('div');
+                    gridDiv.className = 'content-grid';
+                    
+                    level.data_sources.forEach(imageSrc => {
+                        const rowDiv = document.createElement('div');
+                        rowDiv.className = 'content-row';
+                        
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'image-container';
+                        
+                        const img = document.createElement('img');
+                        img.src = imageSrc;
+                        img.alt = imageSrc;
+                        img.className = 'dashboard-image';
+                        img.onerror = function() {
+                            // Replace with placeholder if image fails to load
+                            const placeholder = document.createElement('div');
+                            placeholder.className = 'image-placeholder';
+                            placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
+                            this.parentNode.replaceChild(placeholder, this);
+                        };
+                        
+                        imageContainer.appendChild(img);
+                        rowDiv.appendChild(imageContainer);
+                        gridDiv.appendChild(rowDiv);
+                    });
+                    
+                    levelContent.appendChild(gridDiv);
+                } else {
+                    // Placeholder for missing content
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'placeholder-content';
+                    placeholder.textContent = `${level.name} charts will be displayed here`;
+                    levelContent.appendChild(placeholder);
+                }
+                
+                parentDiv.appendChild(levelContent);
+            });
+        }
+
+        // Render individual section (for simple tabs)
+        function renderSection(section) {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'collapsible-section';
+            
+            // Section toggle button
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'section-toggle collapsed';
+            toggleButton.textContent = section.title;
+            toggleButton.onclick = function() { toggleSection(this); };
+            sectionDiv.appendChild(toggleButton);
+            
+            // Section content
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'section-content';
+            
+            // Add text content if exists
+            if (section.content) {
+                const textDiv = document.createElement('div');
+                textDiv.className = 'content-text';
+                textDiv.innerHTML = section.content.replace(/\n/g, '<br>');
+                contentDiv.appendChild(textDiv);
+            }
+            
+            // Add images if they exist
+            if (section.images && section.images.length > 0) {
+                const gridDiv = document.createElement('div');
+                gridDiv.className = 'content-grid';
+                
+                section.images.forEach(imageSrc => {
+                    const rowDiv = document.createElement('div');
+                    rowDiv.className = 'content-row';
+                    
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container';
+                    
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    img.alt = imageSrc;
+                    img.className = 'dashboard-image';
+                    img.onerror = function() {
+                        // Replace with placeholder if image fails to load
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'image-placeholder';
+                        placeholder.innerHTML = `<div class="placeholder-text">Image not found: ${imageSrc}</div>`;
+                        this.parentNode.replaceChild(placeholder, this);
+                    };
+                    
+                    imageContainer.appendChild(img);
+                    rowDiv.appendChild(imageContainer);
+                    gridDiv.appendChild(rowDiv);
+                });
+                
+                contentDiv.appendChild(gridDiv);
+            }
+            
+            sectionDiv.appendChild(contentDiv);
+            return sectionDiv;
+        }
+
+        // Navigation control functions
+        function openTabById(tabId) {
+            currentTab = tabId;
+            currentSubmenu = null;
+            currentLevel = null;
+            
+            // Hide all tab contents
+            const tabcontents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            const tabbuttons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Show the selected tab content
+            const targetTab = document.getElementById(tabId);
+            if (targetTab) {
+                targetTab.classList.add("active");
+            }
+            
+            // Mark the corresponding button as active
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                if (button.textContent === dashboardConfig.tabs.find(tab => tab.id === tabId)?.name) {
+                    button.classList.add('active');
+                }
+            });
+            
+            updateBreadcrumb();
+            
+            // Auto-collapse navigation if setting is enabled
+            if (dashboardConfig.settings && dashboardConfig.settings.auto_collapse_navigation) {
+                const tabNav = document.getElementById("tabNavigation");
+                tabNav.classList.add("collapsed");
+            }
+        }
+
+        function selectSubmenu(tabId, submenuId) {
+            currentSubmenu = submenuId;
+            currentLevel = null;
+            
+            // Update submenu button states
+            const submenuButtons = document.querySelectorAll(`#submenu-${tabId} .submenu-button`);
+            submenuButtons.forEach(button => {
+                button.classList.remove('active');
+                if (button.textContent === dashboardConfig.tabs.find(tab => tab.id === tabId)?.submenu.find(item => item.id === submenuId)?.name) {
+                    button.classList.add('active');
+                }
