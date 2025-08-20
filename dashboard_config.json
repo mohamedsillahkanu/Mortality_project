@@ -172,6 +172,286 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mortalite_specifique",
+      "name": "Mortalité Spécifique",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "mortalite_paludisme",
+          "title": "Mortalité Spécifique du Paludisme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_respiratoire",
+          "title": "Mortalité Spécifique des Maladies Respiratoires",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_diarrheique",
+          "title": "Mortalité Spécifique des Maladies Diarrhéiques",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_malnutrition",
+          "title": "Mortalité Spécifique de la Malnutrition Aiguë Sévère",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_anemie",
+          "title": "Mortalité Spécifique de l'Anémie",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_hemorragies",
+          "title": "Mortalité Spécifique des Hémorragies chez la Femme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_infections_neonatales",
+          "title": "Mortalité Spécifique des Infections Néonatales",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indicateurs_letalite",
+      "name": "Indicateurs de Létalité",
+      "enabled": true,
+      "sections": [
+        {
+          "id": "letalite_paludisme",
+          "title": "Létalité du Paludisme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_respiratoire",
+          "title": "Létalité des Maladies Respiratoires",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_diarrheique",
+          "title": "Létalité des Maladies Diarrhéiques",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_malnutrition",
+          "title": "Létalité de la Malnutrition Aiguë Sévère",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_anemie",
+          "title": "Létalité de l'Anémie",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_hemorragies",
+          "title": "Létalité des Hémorragies chez la Femme",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "letalite_infections_neonatales",
+          "title": "Létalité des Infections Néonatales",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        }
+      ]
     }
   ],
   "settings": {
