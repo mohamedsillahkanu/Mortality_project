@@ -54,25 +54,27 @@
     },
     {
       "id": "vue_ensemble",
-      "name": "Vue d'ensemble",
+      "name": "Indicateurs de Mortalite",
       "enabled": true,
       "sections": [
         {
           "id": "introduction_projet",
-          "title": "Introduction du Projet",
+          "title": "Tau de Motalite Infanto-Juvenile",
           "enabled": true,
-          "content": "Contenu principal de la section...",
           "subsections": [
             {
-              "title": "Objectifs",
-              "content": "Les objectifs principaux de ce projet sont...",
+              "title": "National",
               "images": ["obj1.png", "obj2.png"]
             },
             {
-              "title": "Méthodologie", 
-              "content": "Notre méthodologie comprend...",
-              "images": ["method.png"]
-            }
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
           ]
         }
       ]
