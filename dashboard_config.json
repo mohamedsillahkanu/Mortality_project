@@ -30,6 +30,7 @@
       "id": "overview",
       "name": "Overview",
       "enabled": true,
+      "has_submenu": false,
       "sections": [
         {
           "id": "introduction",
@@ -53,23 +54,27 @@
       ]
     },
     {
-      "id": "global_mortality_indicators",
+      "id": "mortality_indicators",
       "name": "Indicateurs de Mortalité",
-      "description": "Indicateurs complets de mortalité incluant les taux de mortalité globale et les indicateurs spécifiques au paludisme pour le Burkina Faso",
+      "description": "Indicateurs complets de mortalité incluant les taux de mortalité globale et les indicateurs spécifiques",
       "enabled": true,
-      "categories": [
+      "has_submenu": true,
+      "submenu": [
         {
           "id": "infant_juvenile_mortality",
-          "name": "Taux de Mortalité Infanto-Juvénile",
+          "name": "Mortalité Infanto-Juvénile",
           "description": "Taux de mortalité pour les enfants et juvéniles",
-          "age_group": "0-18 ans",
+          "age_group": "0-5 ans",
           "unit": "pour 1 000 naissances vivantes",
           "enabled": true,
+          "has_levels": true,
           "levels": [
             {
               "id": "infant_juvenile_national",
               "name": "National",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "infant_juvenile_mortality_national_trend_1.png",
                 "infant_juvenile_mortality_national_trend_2.png"
               ]
@@ -77,7 +82,9 @@
             {
               "id": "infant_juvenile_regional",
               "name": "Régional",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "infant_juvenile_mortality_regional_trend_1.png",
                 "infant_juvenile_mortality_regional_trend_2.png"
               ]
@@ -85,7 +92,9 @@
             {
               "id": "infant_juvenile_district",
               "name": "District",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "infant_juvenile_mortality_district_trend_1.png",
                 "infant_juvenile_mortality_district_trend_2.png"
               ]
@@ -94,16 +103,19 @@
         },
         {
           "id": "infant_mortality",
-          "name": "Taux de Mortalité Infantile",
+          "name": "Mortalité Infantile",
           "description": "Taux de mortalité pour les nourrissons",
           "age_group": "0-1 an",
           "unit": "pour 1 000 naissances vivantes",
           "enabled": true,
+          "has_levels": true,
           "levels": [
             {
               "id": "infant_national",
               "name": "National",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "infant_mortality_national_trend_1.png",
                 "infant_mortality_national_trend_2.png"
               ]
@@ -111,7 +123,9 @@
             {
               "id": "infant_regional",
               "name": "Régional",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "infant_mortality_regional_trend_1.png",
                 "infant_mortality_regional_trend_2.png"
               ]
@@ -119,7 +133,9 @@
             {
               "id": "infant_district",
               "name": "District",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "infant_mortality_district_trend_1.png",
                 "infant_mortality_district_trend_2.png"
               ]
@@ -128,16 +144,19 @@
         },
         {
           "id": "neonatal_mortality",
-          "name": "Taux de Mortalité Néonatale",
+          "name": "Mortalité Néonatale",
           "description": "Taux de mortalité pour les nouveau-nés",
           "age_group": "0-28 jours",
           "unit": "pour 1 000 naissances vivantes",
           "enabled": true,
+          "has_levels": true,
           "levels": [
             {
               "id": "neonatal_national",
               "name": "National",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "neonatal_mortality_national_trend_1.png",
                 "neonatal_mortality_national_trend_2.png"
               ]
@@ -145,7 +164,9 @@
             {
               "id": "neonatal_regional",
               "name": "Régional",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "neonatal_mortality_regional_trend_1.png",
                 "neonatal_mortality_regional_trend_2.png"
               ]
@@ -153,7 +174,9 @@
             {
               "id": "neonatal_district",
               "name": "District",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "neonatal_mortality_district_trend_1.png",
                 "neonatal_mortality_district_trend_2.png"
               ]
@@ -162,16 +185,19 @@
         },
         {
           "id": "maternal_mortality",
-          "name": "Taux de Mortalité Maternelle",
+          "name": "Mortalité Maternelle",
           "description": "Taux de mortalité pour les mères pendant la grossesse, l'accouchement et le post-partum",
           "age_group": "âge reproductif",
           "unit": "pour 100 000 naissances vivantes",
           "enabled": true,
+          "has_levels": true,
           "levels": [
             {
               "id": "maternal_national",
               "name": "National",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "maternal_mortality_national_trend_1.png",
                 "maternal_mortality_national_trend_2.png"
               ]
@@ -179,7 +205,9 @@
             {
               "id": "maternal_regional",
               "name": "Régional",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "maternal_mortality_regional_trend_1.png",
                 "maternal_mortality_regional_trend_2.png"
               ]
@@ -187,7 +215,9 @@
             {
               "id": "maternal_district",
               "name": "District",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "maternal_mortality_district_trend_1.png",
                 "maternal_mortality_district_trend_2.png"
               ]
@@ -196,16 +226,19 @@
         },
         {
           "id": "child_mortality_5_14",
-          "name": "Taux de Mortalité des Enfants de 5 à 14 ans",
+          "name": "Mortalité Enfants 5-14 ans",
           "description": "Taux de mortalité pour les enfants âgés de 5 à 14 ans",
           "age_group": "5-14 ans",
           "unit": "pour 1 000 population",
           "enabled": true,
+          "has_levels": true,
           "levels": [
             {
               "id": "child_5_14_national",
               "name": "National",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "child_5_14_mortality_national_trend_1.png",
                 "child_5_14_mortality_national_trend_2.png"
               ]
@@ -213,7 +246,9 @@
             {
               "id": "child_5_14_regional",
               "name": "Régional",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "child_5_14_mortality_regional_trend_1.png",
                 "child_5_14_mortality_regional_trend_2.png"
               ]
@@ -221,7 +256,9 @@
             {
               "id": "child_5_14_district",
               "name": "District",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "child_5_14_mortality_district_trend_1.png",
                 "child_5_14_mortality_district_trend_2.png"
               ]
@@ -230,16 +267,19 @@
         },
         {
           "id": "adult_mortality",
-          "name": "Taux de Mortalité des Adultes",
+          "name": "Mortalité Adultes",
           "description": "Taux de mortalité pour les adultes",
           "age_group": "15+ ans",
           "unit": "pour 1 000 population",
           "enabled": true,
+          "has_levels": true,
           "levels": [
             {
               "id": "adult_national",
               "name": "National",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "adult_mortality_national_trend_1.png",
                 "adult_mortality_national_trend_2.png"
               ]
@@ -247,7 +287,9 @@
             {
               "id": "adult_regional",
               "name": "Régional",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "adult_mortality_regional_trend_1.png",
                 "adult_mortality_regional_trend_2.png"
               ]
@@ -255,7 +297,9 @@
             {
               "id": "adult_district",
               "name": "District",
-              "images": [
+              "enabled": true,
+              "content_type": "charts",
+              "data_sources": [
                 "adult_mortality_district_trend_1.png",
                 "adult_mortality_district_trend_2.png"
               ]
@@ -263,14 +307,833 @@
           ]
         }
       ]
+    },
+    {
+      "id": "specific_mortality",
+      "name": "Mortalité Spécifique",
+      "description": "Indicateurs de mortalité spécifique par cause",
+      "enabled": true,
+      "has_submenu": true,
+      "submenu": [
+        {
+          "id": "malaria_mortality",
+          "name": "Mortalité Paludisme",
+          "description": "Mortalité spécifique du paludisme",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "malaria_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malaria_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malaria_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "respiratory_mortality",
+          "name": "Mortalité Respiratoire",
+          "description": "Mortalité spécifique des maladies respiratoires",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "respiratory_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "respiratory_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "respiratory_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "diarrheal_mortality",
+          "name": "Mortalité Diarrhéique",
+          "description": "Mortalité spécifique des maladies diarrhéiques",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "diarrheal_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "diarrheal_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "diarrheal_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "malnutrition_mortality",
+          "name": "Mortalité Malnutrition",
+          "description": "Mortalité spécifique de la malnutrition aiguë sévère",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "malnutrition_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malnutrition_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malnutrition_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "anemia_mortality",
+          "name": "Mortalité Anémie",
+          "description": "Mortalité spécifique de l'anémie",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "anemia_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "anemia_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "anemia_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "hemorrhage_mortality",
+          "name": "Mortalité Hémorragies",
+          "description": "Mortalité spécifique des hémorragies chez la femme",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "hemorrhage_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "hemorrhage_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "hemorrhage_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "neonatal_infection_mortality",
+          "name": "Mortalité Infections Néonatales",
+          "description": "Mortalité spécifique des infections néonatales",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "neonatal_infection_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "neonatal_infection_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "neonatal_infection_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lethality_indicators",
+      "name": "Indicateurs de Létalité",
+      "description": "Taux de létalité par maladie et région",
+      "enabled": true,
+      "has_submenu": true,
+      "submenu": [
+        {
+          "id": "malaria_lethality",
+          "name": "Létalité Paludisme",
+          "description": "Taux de létalité du paludisme",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "malaria_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malaria_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malaria_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "respiratory_lethality",
+          "name": "Létalité Respiratoire",
+          "description": "Taux de létalité des maladies respiratoires",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "respiratory_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "respiratory_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "respiratory_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "diarrheal_lethality",
+          "name": "Létalité Diarrhéique",
+          "description": "Taux de létalité des maladies diarrhéiques",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "diarrheal_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "diarrheal_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "diarrheal_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "malnutrition_lethality",
+          "name": "Létalité Malnutrition",
+          "description": "Taux de létalité de la malnutrition aiguë sévère",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "malnutrition_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malnutrition_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malnutrition_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "anemia_lethality",
+          "name": "Létalité Anémie",
+          "description": "Taux de létalité de l'anémie",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "anemia_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "anemia_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "anemia_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "hemorrhage_lethality",
+          "name": "Létalité Hémorragies",
+          "description": "Taux de létalité des hémorragies chez la femme",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "hemorrhage_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "hemorrhage_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "hemorrhage_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "neonatal_infection_lethality",
+          "name": "Létalité Infections Néonatales",
+          "description": "Taux de létalité des infections néonatales",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "neonatal_infection_lethality_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "neonatal_infection_lethality_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "neonatal_infection_lethality_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morbidity_indicators",
+      "name": "Indicateurs de Morbidité",
+      "description": "Analyse de la morbidité et des maladies prévalentes",
+      "enabled": true,
+      "has_submenu": true,
+      "submenu": [
+        {
+          "id": "fever_morbidity",
+          "name": "Fièvre",
+          "description": "Proportion des cas de fièvre par groupe d'âge",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "fever_under5_national",
+              "name": "Enfants <5 ans - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "fever_under5_regional",
+              "name": "Enfants <5 ans - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "fever_all_ages_national",
+              "name": "Tous âges - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "fever_all_ages_regional",
+              "name": "Tous âges - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "malaria_morbidity",
+          "name": "Paludisme Confirmé",
+          "description": "Proportion des cas de paludisme confirmé",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "malaria_confirmed_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malaria_confirmed_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "malaria_confirmed_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "anemia_morbidity",
+          "name": "Anémie",
+          "description": "Prévalence de l'anémie chez les enfants 6-59 mois",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "anemia_prevalence_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "anemia_prevalence_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "anemia_prevalence_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malnutrition_indicators",
+      "name": "Indicateurs de Malnutrition",
+      "description": "Indicateurs de malnutrition selon les références OMS 2006",
+      "enabled": true,
+      "has_submenu": true,
+      "submenu": [
+        {
+          "id": "acute_malnutrition",
+          "name": "Malnutrition Aiguë",
+          "description": "Malnutrition aiguë (Poids/Taille et Périmètre brachial)",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "acute_malnutrition_global_national",
+              "name": "Globale - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "acute_malnutrition_global_regional",
+              "name": "Globale - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "acute_malnutrition_moderate_national",
+              "name": "Modérée - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "acute_malnutrition_moderate_regional",
+              "name": "Modérée - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "acute_malnutrition_severe_national",
+              "name": "Sévère - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "acute_malnutrition_severe_regional",
+              "name": "Sévère - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "chronic_malnutrition",
+          "name": "Malnutrition Chronique",
+          "description": "Malnutrition chronique (Taille/Âge)",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "chronic_malnutrition_global_national",
+              "name": "Globale - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "chronic_malnutrition_global_regional",
+              "name": "Globale - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "chronic_malnutrition_moderate_national",
+              "name": "Modérée - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "chronic_malnutrition_moderate_regional",
+              "name": "Modérée - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "chronic_malnutrition_severe_national",
+              "name": "Sévère - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "chronic_malnutrition_severe_regional",
+              "name": "Sévère - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "underweight",
+          "name": "Insuffisance Pondérale",
+          "description": "Insuffisance pondérale (Poids/Âge)",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "underweight_global_national",
+              "name": "Globale - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "underweight_global_regional",
+              "name": "Globale - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "underweight_moderate_national",
+              "name": "Modérée - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "underweight_moderate_regional",
+              "name": "Modérée - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "underweight_severe_national",
+              "name": "Sévère - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "underweight_severe_regional",
+              "name": "Sévère - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "service_coverage",
+      "name": "Couverture des Services",
+      "description": "Indicateurs d'utilisation et de couverture des services de santé",
+      "enabled": true,
+      "has_submenu": true,
+      "submenu": [
+        {
+          "id": "prenatal_coverage",
+          "name": "Soins Prénatals",
+          "description": "Couverture des consultations prénatales",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "cpn1_first_trimester_national",
+              "name": "CPN1 1er trimestre - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "cpn1_first_trimester_regional",
+              "name": "CPN1 1er trimestre - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "cpn4_coverage_national",
+              "name": "Couverture CPN4 - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "cpn4_coverage_regional",
+              "name": "Couverture CPN4 - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "delivery_coverage",
+          "name": "Accouchements",
+          "description": "Proportion d'accouchements assistés",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "delivery_proportion_national",
+              "name": "National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "delivery_proportion_regional",
+              "name": "Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "delivery_proportion_district",
+              "name": "District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "postnatal_coverage",
+          "name": "Soins Post-natals",
+          "description": "Couverture des consultations post-natales",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "postnatal_6weeks_national",
+              "name": "6ème semaine - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "postnatal_6weeks_regional",
+              "name": "6ème semaine - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "postnatal_6weeks_district",
+              "name": "6ème semaine - District",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "consultation_coverage",
+          "name": "Consultations",
+          "description": "Nouvelles consultations par groupe d'âge",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "consultation_under5_national",
+              "name": "Enfants <5 ans - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "consultation_under5_regional",
+              "name": "Enfants <5 ans - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "consultation_adults_national",
+              "name": "Adultes - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "consultation_adults_regional",
+              "name": "Adultes - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        },
+        {
+          "id": "infrastructure_indicators",
+          "name": "Indicateurs d'Infrastructure",
+          "description": "Accessibilité géographique et démographique",
+          "enabled": true,
+          "has_levels": true,
+          "levels": [
+            {
+              "id": "theoretical_radius_national",
+              "name": "Rayon d'action théorique - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "theoretical_radius_regional",
+              "name": "Rayon d'action théorique - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "csps_count_national",
+              "name": "Nombre de CSPS - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "csps_count_regional",
+              "name": "Nombre de CSPS - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "population_csps_ratio_national",
+              "name": "Ratio habitants/CSPS - National",
+              "enabled": true,
+              "content_type": "charts"
+            },
+            {
+              "id": "population_csps_ratio_regional",
+              "name": "Ratio habitants/CSPS - Régional",
+              "enabled": true,
+              "content_type": "charts"
+            }
+          ]
+        }
+      ]
     }
   ],
+  "navigation": {
+    "menu_type": "hierarchical",
+    "max_depth": 3,
+    "collapse_behavior": "accordion",
+    "active_trail": true,
+    "breadcrumb_enabled": true
+  },
   "settings": {
     "default_tab": "overview",
-    "navigation_collapsed": true,
-    "sections_collapsed": true,
-    "show_placeholders": false,
+    "navigation_collapsed": false,
+    "sections_collapsed": false,
+    "show_placeholders": true,
     "image_hover_effects": true,
-    "auto_collapse_navigation": true
+    "auto_collapse_navigation": true,
+    "submenu_animation": "slide",
+    "level_menu_animation": "fade"
   }
 }
