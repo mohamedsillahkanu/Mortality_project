@@ -64,7 +64,7 @@
           "subsections": [
             {
               "title": "National",
-              "content": ["Test", "Silo"]
+              "content": ["Test", "Silo"],
               "images": ["IRSS.png", "MOH.png"]
             },
             {
