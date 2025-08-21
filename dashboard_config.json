@@ -58,8 +58,8 @@
       "enabled": true,
       "sections": [
         {
-          "id": "mortalite_infanto_juvenile",
-          "title": "Taux de Mortalité Infanto-Juvénile",
+          "id": "mortalite_neonatale",
+          "title": "Mortalité Néonatale",
           "enabled": true,
           "subsections": [
             {
@@ -96,27 +96,8 @@
           ]
         },
         {
-          "id": "mortalite_neonatale",
-          "title": "Taux de Mortalité Néonatale",
-          "enabled": true,
-          "subsections": [
-            {
-              "title": "National",
-              "images": ["obj1.png", "obj2.png"]
-            },
-            {
-              "title": "Regional", 
-              "images": ["method.png", "image.png"]
-            },
-            {
-              "title": "District", 
-              "images": ["method.png", "image.png"]
-            }          
-          ]
-        },
-        {
-          "id": "mortalite_maternelle",
-          "title": "Taux de Mortalité Maternelle",
+          "id": "infanto",
+          "title": "Mortalite Infanto-Juvenile",
           "enabled": true,
           "subsections": [
             {
@@ -135,7 +116,26 @@
         },
         {
           "id": "mortalite_5_14_ans",
-          "title": "Taux de Mortalité des Enfants de 5 à 14 ans",
+          "title": "Mortalité des Enfants de 5 à 14 ans",
+          "enabled": true,
+          "subsections": [
+            {
+              "title": "National",
+              "images": ["obj1.png", "obj2.png"]
+            },
+            {
+              "title": "Regional", 
+              "images": ["method.png", "image.png"]
+            },
+            {
+              "title": "District", 
+              "images": ["method.png", "image.png"]
+            }          
+          ]
+        },
+        {
+          "id": "mortalite_maternelle",
+          "title": "Mortalité Maternelle",
           "enabled": true,
           "subsections": [
             {
@@ -154,7 +154,7 @@
         },
         {
           "id": "mortalite_adultes",
-          "title": "Taux de Mortalité des Adultes",
+          "title": "Mortalité des Adultes",
           "enabled": true,
           "subsections": [
             {
