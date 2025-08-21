@@ -165,7 +165,7 @@
               "title": "Regional", 
               "images": ["method.png", "image.png"]
             },
-            {
+            {    
               "title": "District", 
               "images": ["method.png", "image.png"]
             }          
