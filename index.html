@@ -825,11 +825,18 @@
             const contentDiv = document.createElement('div');
             contentDiv.className = 'sub-subsection-content';
             
+            
             // Add text content if exists
             if (subSubsection.content) {
                 const textDiv = document.createElement('div');
                 textDiv.className = 'content-text';
-                textDiv.innerHTML = subSubsection.content.replace(/\n/g, '<br>');
+                
+                if (Array.isArray(subSubsection.content)) {
+                    textDiv.innerHTML = subSubsection.content.join('<br>').replace(/\n/g, '<br>');
+                } else {
+                    textDiv.innerHTML = subSubsection.content.replace(/\n/g, '<br>');
+                }
+                
                 contentDiv.appendChild(textDiv);
             }
             
